@@ -1,0 +1,9 @@
+// Valve Game Info file
+//  These are key/value pairs.  Certain mods will use different settings.
+//
+game "SharpLife-Full"
+startmap "c0a0"
+trainmap "t0a0"
+mpentity "info_player_deathmatch"
+gamedll "cl_dlls\client.dll"
+secure "1"
