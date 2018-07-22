@@ -1,0 +1,142 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "50f43dc45cd76e49399762206df45a942d9f9813"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "SharpLife.FileFormats.BSP/1.0.0": {
+        "dependencies": {
+          "SharpLife.FileFormats.WAD": "1.0.0",
+          "SharpLife.Utility": "1.0.0"
+        },
+        "runtime": {
+          "SharpLife.FileFormats.BSP.dll": {}
+        }
+      },
+      "SixLabors.Core/1.0.0-beta0005": {
+        "runtime": {
+          "lib/netcoreapp2.0/SixLabors.Core.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.0.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/1.0.0-dev001535": {
+        "dependencies": {
+          "SixLabors.Core": "1.0.0-beta0005",
+          "System.Buffers": "4.5.0",
+          "System.Memory": "4.5.1",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "System.Buffers/4.5.0": {},
+      "System.Memory/4.5.1": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26606.5"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SharpLife.FileFormats.WAD/1.0.0": {
+        "dependencies": {
+          "SharpLife.FileSystem": "1.0.0",
+          "SharpLife.Utility": "1.0.0",
+          "SixLabors.ImageSharp": "1.0.0-dev001535"
+        },
+        "runtime": {
+          "SharpLife.FileFormats.WAD.dll": {}
+        }
+      },
+      "SharpLife.FileSystem/1.0.0": {
+        "runtime": {
+          "SharpLife.FileSystem.dll": {}
+        }
+      },
+      "SharpLife.Utility/1.0.0": {
+        "dependencies": {
+          "SharpLife.FileSystem": "1.0.0"
+        },
+        "runtime": {
+          "SharpLife.Utility.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SharpLife.FileFormats.BSP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SixLabors.Core/1.0.0-beta0005": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RnLbRe5J9kjSH+EDA8a58shzI+nNt96aJw1WgXxdn+DSc/ryirdEPO/2EIITvaSX6Nk9Lepcj8EOVfq16fhUmg==",
+      "path": "sixlabors.core/1.0.0-beta0005",
+      "hashPath": "sixlabors.core.1.0.0-beta0005.nupkg.sha512"
+    },
+    "SixLabors.ImageSharp/1.0.0-dev001535": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Gysnj5ORjHYK2qRPsDCUYRs+A7PBMan84+Mm83OPYF39bvCO3Mc9T8oZctwetPrZVago8w21gScZ7R5ni68JRw==",
+      "path": "sixlabors.imagesharp/1.0.0-dev001535",
+      "hashPath": "sixlabors.imagesharp.1.0.0-dev001535.nupkg.sha512"
+    },
+    "System.Buffers/4.5.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xpHYjjtyTEpzMwtSQBWdVc3dPjLdQtvyUg6fBlBqcLl1r2Y7gDG/W/enAYOB98nG3oD3Q153Y2FBO8JDWd+0Xw==",
+      "path": "system.buffers/4.5.0",
+      "hashPath": "system.buffers.4.5.0.nupkg.sha512"
+    },
+    "System.Memory/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vcG3/MbfpxznMkkkaAblJi7RHOmuP7kawQMhDgLSuA1tRpRQYsFSCTxRSINDUgn2QNn2jWeLxv8er5BXbyACkw==",
+      "path": "system.memory/4.5.1",
+      "hashPath": "system.memory.4.5.1.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+    },
+    "SharpLife.FileFormats.WAD/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpLife.FileSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpLife.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

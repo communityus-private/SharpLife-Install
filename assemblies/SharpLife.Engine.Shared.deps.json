@@ -1,0 +1,222 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.0",
+    "signature": "da685fe4d3bfdbddaec658d0223e5e3d5bbeaf94"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.0": {
+      "SharpLife.Engine.Shared/1.0.0": {
+        "dependencies": {
+          "SharpLife.CommandSystem": "1.0.0",
+          "SharpLife.Input": "1.0.0",
+          "SharpLife.Utility": "1.0.0",
+          "System.Memory": "4.5.1",
+          "SDL2-CS": "0.0.0.0",
+          "SixLabors.ImageSharp": "1.0.0.0",
+          "Veldrid.SDL2": "4.4.0.0"
+        },
+        "runtime": {
+          "SharpLife.Engine.Shared.dll": {}
+        }
+      },
+      "System.Memory/4.5.1": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Memory.dll": {
+            "assemblyVersion": "4.0.1.0",
+            "fileVersion": "4.6.26606.5"
+          }
+        }
+      },
+      "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+        "runtime": {
+          "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
+            "assemblyVersion": "4.0.4.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SharpLife.CommandSystem/1.0.0": {
+        "dependencies": {
+          "SharpLife.Utility": "1.0.0"
+        },
+        "runtime": {
+          "SharpLife.CommandSystem.dll": {}
+        }
+      },
+      "SharpLife.FileSystem/1.0.0": {
+        "runtime": {
+          "SharpLife.FileSystem.dll": {}
+        }
+      },
+      "SharpLife.Input/1.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1",
+          "NativeLibraryLoader": "1.0.10.0",
+          "Microsoft.Extensions.DependencyModel": "2.0.3.0",
+          "Microsoft.DotNet.PlatformAbstractions": "2.0.3.0",
+          "Newtonsoft.Json": "9.0.0.0"
+        },
+        "runtime": {
+          "SharpLife.Input.dll": {}
+        }
+      },
+      "SharpLife.Utility/1.0.0": {
+        "dependencies": {
+          "SharpLife.FileSystem": "1.0.0"
+        },
+        "runtime": {
+          "SharpLife.Utility.dll": {}
+        }
+      },
+      "SDL2-CS/0.0.0.0": {
+        "runtime": {
+          "SDL2-CS.dll": {
+            "assemblyVersion": "0.0.0.0",
+            "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "SixLabors.ImageSharp/1.0.0.0": {
+        "runtime": {
+          "SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Veldrid.SDL2/4.4.0.0": {
+        "runtime": {
+          "Veldrid.SDL2.dll": {
+            "assemblyVersion": "4.4.0.0",
+            "fileVersion": "4.4.0.22"
+          }
+        }
+      },
+      "SixLabors.Core/0.1.0.0": {
+        "runtime": {
+          "SixLabors.Core.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.0.0"
+          }
+        }
+      },
+      "NativeLibraryLoader.Reference/1.0.10.0": {
+        "runtime": {
+          "NativeLibraryLoader.dll": {
+            "assemblyVersion": "1.0.10.0",
+            "fileVersion": "1.0.10.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyModel.Reference/2.0.3.0": {
+        "runtime": {
+          "Microsoft.Extensions.DependencyModel.dll": {
+            "assemblyVersion": "2.0.3.0",
+            "fileVersion": "2.0.3.0"
+          }
+        }
+      },
+      "Microsoft.DotNet.PlatformAbstractions.Reference/2.0.3.0": {
+        "runtime": {
+          "Microsoft.DotNet.PlatformAbstractions.dll": {
+            "assemblyVersion": "2.0.3.0",
+            "fileVersion": "2.0.3.0"
+          }
+        }
+      },
+      "Newtonsoft.Json.Reference/9.0.0.0": {
+        "runtime": {
+          "Newtonsoft.Json.dll": {
+            "assemblyVersion": "9.0.0.0",
+            "fileVersion": "9.0.1.19813"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "SharpLife.Engine.Shared/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "System.Memory/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-vcG3/MbfpxznMkkkaAblJi7RHOmuP7kawQMhDgLSuA1tRpRQYsFSCTxRSINDUgn2QNn2jWeLxv8er5BXbyACkw==",
+      "path": "system.memory/4.5.1",
+      "hashPath": "system.memory.4.5.1.nupkg.sha512"
+    },
+    "System.Runtime.CompilerServices.Unsafe/4.5.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-qUJMNWhbm9oZ3XaMFiEMiYmRPszbnXIkRIi7+4b2Md2xZ6JUOepf0/kY3S85qistRohl9OdMe4PsO+RdG2kTIQ==",
+      "path": "system.runtime.compilerservices.unsafe/4.5.1",
+      "hashPath": "system.runtime.compilerservices.unsafe.4.5.1.nupkg.sha512"
+    },
+    "SharpLife.CommandSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpLife.FileSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpLife.Input/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpLife.Utility/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SDL2-CS/0.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SixLabors.ImageSharp/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Veldrid.SDL2/4.4.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SixLabors.Core/0.1.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NativeLibraryLoader.Reference/1.0.10.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.Extensions.DependencyModel.Reference/2.0.3.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Microsoft.DotNet.PlatformAbstractions.Reference/2.0.3.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Newtonsoft.Json.Reference/9.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
