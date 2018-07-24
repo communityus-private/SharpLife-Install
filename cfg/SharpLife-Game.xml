@@ -1,4 +1,6 @@
 <?xml version="1.0"?>
 <GameConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
 	<GameName>SharpLife Test</GameName>
+	<ClientMod AssemblyName="assemblies/SharpLife.Game.Client.dll" EntrypointClass="SharpLife.Game.Client.API.ClientMod"></ClientMod>
+	<ServerMod AssemblyName="assemblies/SharpLife.Game.Server.dll" EntrypointClass="SharpLife.Game.Client.API.ServerMod"></ServerMod>
 </GameConfiguration>
