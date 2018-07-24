@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "7dee3a4946d461f611d427e75f360f470f74fd15"
+    "signature": "8f67a579a04cd1ddffd4f599ad8b97b6a5bc0bd9"
   },
   "compilationOptions": {},
   "targets": {
@@ -54,6 +54,25 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection/2.1.1": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
+        },
+        "runtime": {
+          "lib/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
+          }
+        }
+      },
+      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+        "runtime": {
+          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
+            "assemblyVersion": "2.1.1.0",
+            "fileVersion": "2.1.1.18157"
           }
         }
       },
@@ -274,8 +293,14 @@
           "SharpLife.CommandSystem.dll": {}
         }
       },
+      "SharpLife.Engine.API/1.0.0": {
+        "runtime": {
+          "SharpLife.Engine.API.dll": {}
+        }
+      },
       "SharpLife.Engine.Client/1.0.0": {
         "dependencies": {
+          "SharpLife.Engine.API": "1.0.0",
           "SharpLife.Engine.Shared": "1.0.0",
           "SharpLife.Renderer": "1.0.0",
           "SharpLife.Renderer.BSP": "1.0.0"
@@ -286,6 +311,9 @@
       },
       "SharpLife.Engine.Server/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "Serilog": "2.7.1",
+          "SharpLife.Engine.API": "1.0.0",
           "SharpLife.Engine.Shared": "1.0.0"
         },
         "runtime": {
@@ -295,6 +323,7 @@
       "SharpLife.Engine.Shared/1.0.0": {
         "dependencies": {
           "SharpLife.CommandSystem": "1.0.0",
+          "SharpLife.FileFormats.BSP": "1.0.0",
           "SharpLife.Input": "1.0.0",
           "SharpLife.Utility": "1.0.0",
           "System.Memory": "4.5.1"
@@ -316,7 +345,7 @@
         "dependencies": {
           "SharpLife.FileSystem": "1.0.0",
           "SharpLife.Utility": "1.0.0",
-          "SixLabors.ImageSharp": "1.0.0-dev001535"
+          "System.Memory": "4.5.1"
         },
         "runtime": {
           "SharpLife.FileFormats.WAD.dll": {}
@@ -341,7 +370,7 @@
           "Serilog": "2.7.1",
           "SharpLife.FileSystem": "1.0.0",
           "SharpLife.Input": "1.0.0",
-          "SixLabors.ImageSharp": "1.0.0-dev001535",
+          "System.Memory": "4.5.1",
           "Veldrid": "4.4.0.0",
           "Veldrid.ImGui": "4.4.0.0",
           "Veldrid.Utilities": "4.4.0.0",
@@ -365,6 +394,7 @@
         "dependencies": {
           "SharpLife.FileFormats.BSP": "1.0.0",
           "SharpLife.Renderer": "1.0.0",
+          "System.Memory": "4.5.1",
           "SDL2-CS": "0.0.0.0",
           "Veldrid.SDL2": "4.4.0.0",
           "Microsoft.Extensions.DependencyModel": "2.0.3.0",
@@ -540,6 +570,20 @@
       "sha512": "sha512-Q/D7a9YsSwG7KhWtxqTjku6i+VK+ypyapEgLe9nMP2Wb3lpWY5/m7XVCXWOEojJZLx649kvVBlmOn9iIrKIidw==",
       "path": "imgui.net/0.4.7",
       "hashPath": "imgui.net.0.4.7.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-2nshYaLTn73Ie+/yTkb7EZIXwQeFIXsYCBy/jSY9bMayYykGNjdWa25frayhuPAGVbZpEgfgp3d4JRVEuVyEqQ==",
+      "path": "microsoft.extensions.dependencyinjection/2.1.1",
+      "hashPath": "microsoft.extensions.dependencyinjection.2.1.1.nupkg.sha512"
+    },
+    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-PW1596sF97gpIc1JuUuYvTmeLfeqC5whbWPsWgJhN0fdwz683him3b/HB0dqhFesVssOjnnA0fEz4+S0gUeBqA==",
+      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.1",
+      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.2.1.1.nupkg.sha512"
     },
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
@@ -738,6 +782,11 @@
       "hashPath": "system.threading.timer.4.0.1.nupkg.sha512"
     },
     "SharpLife.CommandSystem/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpLife.Engine.API/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "faddddb9ba7ada965d1df682063f24d9b86a0cda"
+    "signature": "5f6b28387615be172bfccfa172f79d28741a0dc2"
   },
   "compilationOptions": {},
   "targets": {
@@ -10,6 +10,8 @@
         "dependencies": {
           "SharpLife.FileFormats.BSP": "1.0.0",
           "SharpLife.Renderer": "1.0.0",
+          "System.Memory": "4.5.1",
+          "SixLabors.ImageSharp": "1.0.0.0",
           "Veldrid": "4.4.0.0",
           "Veldrid.ImageSharp": "4.4.0.0",
           "Veldrid.Utilities": "4.4.0.0"
@@ -20,7 +22,7 @@
       },
       "ImGui.NET/0.4.7": {
         "dependencies": {
-          "System.Buffers": "4.5.0",
+          "System.Buffers": "4.4.0",
           "System.Numerics.Vectors": "4.4.0",
           "System.Runtime.CompilerServices.Unsafe": "4.5.1"
         },
@@ -65,29 +67,7 @@
           }
         }
       },
-      "SixLabors.Core/1.0.0-beta0005": {
-        "runtime": {
-          "lib/netcoreapp2.0/SixLabors.Core.dll": {
-            "assemblyVersion": "0.1.0.0",
-            "fileVersion": "0.1.0.0"
-          }
-        }
-      },
-      "SixLabors.ImageSharp/1.0.0-dev001535": {
-        "dependencies": {
-          "SixLabors.Core": "1.0.0-beta0005",
-          "System.Buffers": "4.5.0",
-          "System.Memory": "4.5.1",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/SixLabors.ImageSharp.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "System.Buffers/4.5.0": {},
+      "System.Buffers/4.4.0": {},
       "System.Collections.NonGeneric/4.3.0": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.3.0",
@@ -192,7 +172,8 @@
       "SharpLife.FileFormats.BSP/1.0.0": {
         "dependencies": {
           "SharpLife.FileFormats.WAD": "1.0.0",
-          "SharpLife.Utility": "1.0.0"
+          "SharpLife.Utility": "1.0.0",
+          "SixLabors.Core": "0.1.0.0"
         },
         "runtime": {
           "SharpLife.FileFormats.BSP.dll": {}
@@ -202,7 +183,7 @@
         "dependencies": {
           "SharpLife.FileSystem": "1.0.0",
           "SharpLife.Utility": "1.0.0",
-          "SixLabors.ImageSharp": "1.0.0-dev001535"
+          "System.Memory": "4.5.1"
         },
         "runtime": {
           "SharpLife.FileFormats.WAD.dll": {}
@@ -232,7 +213,7 @@
           "Serilog": "2.7.1",
           "SharpLife.FileSystem": "1.0.0",
           "SharpLife.Input": "1.0.0",
-          "SixLabors.ImageSharp": "1.0.0-dev001535",
+          "System.Memory": "4.5.1",
           "Veldrid.ImGui": "4.4.0.0",
           "Veldrid.SPIRV": "1.0.0.0",
           "vk": "1.0.19.0",
@@ -254,6 +235,14 @@
         },
         "runtime": {
           "SharpLife.Utility.dll": {}
+        }
+      },
+      "SixLabors.ImageSharp/1.0.0.0": {
+        "runtime": {
+          "SixLabors.ImageSharp.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Veldrid/4.4.0.0": {
@@ -309,6 +298,14 @@
           "Veldrid.SDL2.dll": {
             "assemblyVersion": "4.4.0.0",
             "fileVersion": "4.4.0.22"
+          }
+        }
+      },
+      "SixLabors.Core.Reference/0.1.0.0": {
+        "runtime": {
+          "SixLabors.Core.dll": {
+            "assemblyVersion": "0.1.0.0",
+            "fileVersion": "0.1.0.0"
           }
         }
       },
@@ -429,26 +426,12 @@
       "path": "serilog/2.7.1",
       "hashPath": "serilog.2.7.1.nupkg.sha512"
     },
-    "SixLabors.Core/1.0.0-beta0005": {
+    "System.Buffers/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RnLbRe5J9kjSH+EDA8a58shzI+nNt96aJw1WgXxdn+DSc/ryirdEPO/2EIITvaSX6Nk9Lepcj8EOVfq16fhUmg==",
-      "path": "sixlabors.core/1.0.0-beta0005",
-      "hashPath": "sixlabors.core.1.0.0-beta0005.nupkg.sha512"
-    },
-    "SixLabors.ImageSharp/1.0.0-dev001535": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-Gysnj5ORjHYK2qRPsDCUYRs+A7PBMan84+Mm83OPYF39bvCO3Mc9T8oZctwetPrZVago8w21gScZ7R5ni68JRw==",
-      "path": "sixlabors.imagesharp/1.0.0-dev001535",
-      "hashPath": "sixlabors.imagesharp.1.0.0-dev001535.nupkg.sha512"
-    },
-    "System.Buffers/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-xpHYjjtyTEpzMwtSQBWdVc3dPjLdQtvyUg6fBlBqcLl1r2Y7gDG/W/enAYOB98nG3oD3Q153Y2FBO8JDWd+0Xw==",
-      "path": "system.buffers/4.5.0",
-      "hashPath": "system.buffers.4.5.0.nupkg.sha512"
+      "sha512": "sha512-AwarXzzoDwX6BgrhjoJsk6tUezZEozOT5Y9QKF94Gl4JK91I4PIIBkBco9068Y9/Dra8Dkbie99kXB8+1BaYKw==",
+      "path": "system.buffers/4.4.0",
+      "hashPath": "system.buffers.4.4.0.nupkg.sha512"
     },
     "System.Collections.NonGeneric/4.3.0": {
       "type": "package",
@@ -585,6 +568,11 @@
       "serviceable": false,
       "sha512": ""
     },
+    "SixLabors.ImageSharp/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Veldrid/4.4.0.0": {
       "type": "reference",
       "serviceable": false,
@@ -616,6 +604,11 @@
       "sha512": ""
     },
     "Veldrid.SDL2.Reference/4.4.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SixLabors.Core.Reference/0.1.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

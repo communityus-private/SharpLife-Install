@@ -9,6 +9,7 @@
       "SharpLife.Engine.Shared/1.0.0": {
         "dependencies": {
           "SharpLife.CommandSystem": "1.0.0",
+          "SharpLife.FileFormats.BSP": "1.0.0",
           "SharpLife.Input": "1.0.0",
           "SharpLife.Utility": "1.0.0",
           "System.Memory": "4.5.1",
@@ -45,6 +46,26 @@
         },
         "runtime": {
           "SharpLife.CommandSystem.dll": {}
+        }
+      },
+      "SharpLife.FileFormats.BSP/1.0.0": {
+        "dependencies": {
+          "SharpLife.FileFormats.WAD": "1.0.0",
+          "SharpLife.Utility": "1.0.0",
+          "SixLabors.Core": "0.1.0.0"
+        },
+        "runtime": {
+          "SharpLife.FileFormats.BSP.dll": {}
+        }
+      },
+      "SharpLife.FileFormats.WAD/1.0.0": {
+        "dependencies": {
+          "SharpLife.FileSystem": "1.0.0",
+          "SharpLife.Utility": "1.0.0",
+          "System.Memory": "4.5.1"
+        },
+        "runtime": {
+          "SharpLife.FileFormats.WAD.dll": {}
         }
       },
       "SharpLife.FileSystem/1.0.0": {
@@ -96,7 +117,7 @@
           }
         }
       },
-      "SixLabors.Core/0.1.0.0": {
+      "SixLabors.Core.Reference/0.1.0.0": {
         "runtime": {
           "SixLabors.Core.dll": {
             "assemblyVersion": "0.1.0.0",
@@ -163,6 +184,16 @@
       "serviceable": false,
       "sha512": ""
     },
+    "SharpLife.FileFormats.BSP/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpLife.FileFormats.WAD/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "SharpLife.FileSystem/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -193,7 +224,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "SixLabors.Core/0.1.0.0": {
+    "SixLabors.Core.Reference/0.1.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
