@@ -1,11 +1,11 @@
 {
   "runtimeTarget": {
-    "name": ".NETCoreApp,Version=v2.0",
-    "signature": "5f6b28387615be172bfccfa172f79d28741a0dc2"
+    "name": ".NETCoreApp,Version=v2.1",
+    "signature": "4578c14b04631404eb9c0f643cbc248997e16896"
   },
   "compilationOptions": {},
   "targets": {
-    ".NETCoreApp,Version=v2.0": {
+    ".NETCoreApp,Version=v2.1": {
       "SharpLife.Engine.Client/1.0.0": {
         "dependencies": {
           "SharpLife.Engine.API": "1.0.0",
@@ -54,7 +54,6 @@
           }
         }
       },
-      "Microsoft.NETCore.Targets/1.1.0": {},
       "Serilog/2.7.1": {
         "dependencies": {
           "System.Collections.NonGeneric": "4.3.0"
@@ -79,39 +78,25 @@
       },
       "System.Diagnostics.Debug/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Globalization/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.IO/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0",
           "System.Text.Encoding": "4.3.0",
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Memory/4.5.1": {
-        "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Memory.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.6.26606.5"
-          }
-        }
-      },
+      "System.Memory/4.5.1": {},
       "System.Numerics.Vectors/4.4.0": {},
       "System.Reflection/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
           "System.IO": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0"
@@ -119,23 +104,17 @@
       },
       "System.Reflection.Primitives/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Resources.ResourceManager/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Globalization": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Runtime/4.3.0": {
-        "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0"
-        }
-      },
+      "System.Runtime/4.3.0": {},
       "System.Runtime.CompilerServices.Unsafe/4.5.1": {
         "runtime": {
           "lib/netcoreapp2.0/System.Runtime.CompilerServices.Unsafe.dll": {
@@ -146,13 +125,11 @@
       },
       "System.Runtime.Extensions/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
       "System.Text.Encoding/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
@@ -164,7 +141,6 @@
       },
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
-          "Microsoft.NETCore.Targets": "1.1.0",
           "System.Runtime": "4.3.0"
         }
       },
@@ -196,9 +172,7 @@
       "SharpLife.FileFormats.BSP/1.0.0": {
         "dependencies": {
           "SharpLife.FileFormats.WAD": "1.0.0",
-          "SharpLife.Utility": "1.0.0",
-          "SixLabors.ImageSharp": "1.0.0.0",
-          "SixLabors.Core": "0.1.0.0"
+          "SharpLife.Utility": "1.0.0"
         },
         "runtime": {
           "SharpLife.FileFormats.BSP.dll": {}
@@ -221,10 +195,7 @@
       },
       "SharpLife.Input/1.0.0": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1",
-          "Veldrid.SDL2": "4.4.0.0",
-          "NativeLibraryLoader": "1.0.10.0",
-          "Newtonsoft.Json": "9.0.0.0"
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
         },
         "runtime": {
           "SharpLife.Input.dll": {}
@@ -237,13 +208,20 @@
           "SharpLife.FileSystem": "1.0.0",
           "SharpLife.Input": "1.0.0",
           "System.Memory": "4.5.1",
+          "SixLabors.ImageSharp": "1.0.0.0",
+          "Veldrid.SDL2": "4.4.0.0",
           "vk": "1.0.19.0",
           "Veldrid.MetalBindings": "4.4.0.0",
           "Veldrid.OpenGLBindings": "4.4.0.0",
+          "NativeLibraryLoader": "1.0.10.0",
           "SharpDX.Direct3D11": "4.0.1.0",
           "SharpDX": "4.0.1.0",
           "SharpDX.DXGI": "4.0.1.0",
-          "SharpDX.D3DCompiler": "4.0.1.0"
+          "SharpDX.D3DCompiler": "4.0.1.0",
+          "SixLabors.Core": "0.1.0.0",
+          "Microsoft.Extensions.DependencyModel": "2.0.3.0",
+          "Microsoft.DotNet.PlatformAbstractions": "2.0.3.0",
+          "Newtonsoft.Json": "9.0.0.0"
         },
         "runtime": {
           "SharpLife.Renderer.dll": {}
@@ -257,9 +235,7 @@
           "Veldrid.Utilities": "4.4.0.0",
           "Veldrid.ImageSharp": "4.4.0.0",
           "Veldrid.ImGui": "4.4.0.0",
-          "Veldrid.SPIRV": "1.0.0.0",
-          "Microsoft.Extensions.DependencyModel": "2.0.3.0",
-          "Microsoft.DotNet.PlatformAbstractions": "2.0.3.0"
+          "Veldrid.SPIRV": "1.0.0.0"
         },
         "runtime": {
           "SharpLife.Renderer.BSP.dll": {}
@@ -447,13 +423,6 @@
       "sha512": "sha512-Q/D7a9YsSwG7KhWtxqTjku6i+VK+ypyapEgLe9nMP2Wb3lpWY5/m7XVCXWOEojJZLx649kvVBlmOn9iIrKIidw==",
       "path": "imgui.net/0.4.7",
       "hashPath": "imgui.net.0.4.7.nupkg.sha512"
-    },
-    "Microsoft.NETCore.Targets/1.1.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
-      "path": "microsoft.netcore.targets/1.1.0",
-      "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
     },
     "Serilog/2.7.1": {
       "type": "package",
