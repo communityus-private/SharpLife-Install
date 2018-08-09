@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "833ccb98d77a64da4c695f0b302cb6b54d10ee67"
+    "signature": "eaf39428808d917a353f6f63ffb295b698c065e0"
   },
   "compilationOptions": {},
   "targets": {
@@ -11,6 +11,7 @@
           "Serilog": "2.7.1",
           "Serilog.Formatting.Compact": "1.0.0",
           "Serilog.Sinks.File": "4.0.0",
+          "Serilog.Sinks.TextWriter": "2.1.0",
           "SharpLife.CommandSystem": "1.0.0",
           "SharpLife.Engine.Client": "1.0.0",
           "SharpLife.Engine.Server": "1.0.0",
@@ -22,6 +23,23 @@
           "SharpLife.Engine.dll": {}
         }
       },
+      "Crc32.NET/1.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/Crc32.NET.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.2.0.5"
+          }
+        }
+      },
+      "Google.Protobuf/3.6.0": {
+        "runtime": {
+          "lib/netstandard1.0/Google.Protobuf.dll": {
+            "assemblyVersion": "3.6.0.0",
+            "fileVersion": "3.6.0.0"
+          }
+        }
+      },
+      "Google.Protobuf.Tools/3.6.0": {},
       "ImGui.NET/0.4.7": {
         "dependencies": {
           "System.Buffers": "4.4.0",
@@ -113,6 +131,18 @@
           "lib/netstandard1.3/Serilog.Sinks.File.dll": {
             "assemblyVersion": "2.0.0.0",
             "fileVersion": "4.0.0.0"
+          }
+        }
+      },
+      "Serilog.Sinks.TextWriter/2.1.0": {
+        "dependencies": {
+          "Serilog": "2.7.1",
+          "System.IO": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.0/Serilog.Sinks.TextWriter.dll": {
+            "assemblyVersion": "2.0.0.0",
+            "fileVersion": "2.1.0.0"
           }
         }
       },
@@ -256,6 +286,7 @@
       },
       "SharpLife.CommandSystem/1.0.0": {
         "dependencies": {
+          "Serilog": "2.7.1",
           "SharpLife.Utility": "1.0.0"
         },
         "runtime": {
@@ -263,14 +294,22 @@
         }
       },
       "SharpLife.Engine.API/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "SharpLife.CommandSystem": "1.0.0",
+          "SharpLife.Engine.Shared": "1.0.0"
+        },
         "runtime": {
           "SharpLife.Engine.API.dll": {}
         }
       },
       "SharpLife.Engine.Client/1.0.0": {
         "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
           "SharpLife.Engine.API": "1.0.0",
           "SharpLife.Engine.Shared": "1.0.0",
+          "SharpLife.Game.Client": "1.0.0",
+          "SharpLife.Networking.Shared": "1.0.0",
           "SharpLife.Renderer": "1.0.0",
           "SharpLife.Renderer.BSP": "1.0.0"
         },
@@ -283,7 +322,10 @@
           "Microsoft.Extensions.DependencyInjection": "2.1.1",
           "Serilog": "2.7.1",
           "SharpLife.Engine.API": "1.0.0",
-          "SharpLife.Engine.Shared": "1.0.0"
+          "SharpLife.Engine.Shared": "1.0.0",
+          "SharpLife.Game.Server": "1.0.0",
+          "SharpLife.Networking.Shared": "1.0.0",
+          "Lidgren.Network.MultiTarget": "1.0.0.0"
         },
         "runtime": {
           "SharpLife.Engine.Server.dll": {}
@@ -291,13 +333,12 @@
       },
       "SharpLife.Engine.Shared/1.0.0": {
         "dependencies": {
+          "Serilog": "2.7.1",
           "SharpLife.CommandSystem": "1.0.0",
           "SharpLife.FileFormats.BSP": "1.0.0",
           "SharpLife.Input": "1.0.0",
           "SharpLife.Utility": "1.0.0",
-          "System.Memory": "4.5.1",
-          "NativeLibraryLoader": "1.0.10.0",
-          "Newtonsoft.Json": "9.0.0.0"
+          "System.Memory": "4.5.1"
         },
         "runtime": {
           "SharpLife.Engine.Shared.dll": {}
@@ -305,6 +346,7 @@
       },
       "SharpLife.FileFormats.BSP/1.0.0": {
         "dependencies": {
+          "Crc32.NET": "1.2.0",
           "SharpLife.FileFormats.WAD": "1.0.0",
           "SharpLife.Utility": "1.0.0"
         },
@@ -327,12 +369,47 @@
           "SharpLife.FileSystem.dll": {}
         }
       },
-      "SharpLife.Input/1.0.0": {
+      "SharpLife.Game.Client/1.0.0": {
         "dependencies": {
+          "ImGui.NET": "0.4.7",
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "SharpLife.Engine.API": "1.0.0",
+          "SharpLife.Utility": "1.0.0",
           "System.Runtime.CompilerServices.Unsafe": "4.5.1"
         },
         "runtime": {
+          "SharpLife.Game.Client.dll": {}
+        }
+      },
+      "SharpLife.Game.Server/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.DependencyInjection": "2.1.1",
+          "SharpLife.Engine.API": "1.0.0"
+        },
+        "runtime": {
+          "SharpLife.Game.Server.dll": {}
+        }
+      },
+      "SharpLife.Input/1.0.0": {
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1",
+          "NativeLibraryLoader": "1.0.10.0",
+          "Microsoft.Extensions.DependencyModel": "2.0.3.0",
+          "Microsoft.DotNet.PlatformAbstractions": "2.0.3.0",
+          "Newtonsoft.Json": "9.0.0.0"
+        },
+        "runtime": {
           "SharpLife.Input.dll": {}
+        }
+      },
+      "SharpLife.Networking.Shared/1.0.0": {
+        "dependencies": {
+          "Google.Protobuf": "3.6.0",
+          "Google.Protobuf.Tools": "3.6.0",
+          "Serilog": "2.7.1"
+        },
+        "runtime": {
+          "SharpLife.Networking.Shared.dll": {}
         }
       },
       "SharpLife.Renderer/1.0.0": {
@@ -365,9 +442,7 @@
           "SharpLife.Renderer": "1.0.0",
           "System.Memory": "4.5.1",
           "SDL2-CS": "0.0.0.0",
-          "Veldrid.SDL2": "4.4.0.0",
-          "Microsoft.Extensions.DependencyModel": "2.0.3.0",
-          "Microsoft.DotNet.PlatformAbstractions": "2.0.3.0"
+          "Veldrid.SDL2": "4.4.0.0"
         },
         "runtime": {
           "SharpLife.Renderer.BSP.dll": {}
@@ -379,6 +454,14 @@
         },
         "runtime": {
           "SharpLife.Utility.dll": {}
+        }
+      },
+      "Lidgren.Network.MultiTarget.Reference/1.0.0.0": {
+        "runtime": {
+          "Lidgren.Network.MultiTarget.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
         }
       },
       "Veldrid.Reference/4.4.0.0": {
@@ -533,6 +616,27 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Crc32.NET/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wNW/huzolu8MNKUnwCVKxjfAlCFpeI8AZVfF46iAWJ1+P6bTU1AZct7VAkDDEjgeeTJCVTkGZaD6jSd/fOiUkA==",
+      "path": "crc32.net/1.2.0",
+      "hashPath": "crc32.net.1.2.0.nupkg.sha512"
+    },
+    "Google.Protobuf/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-gGYQonf/3HSQR45QIK3mvBChx2wguUn0azZM1SbGVjO1tFA0mhgdYFhz4EXBAEH01+wem0zIwtWniTCe5DHpYg==",
+      "path": "google.protobuf/3.6.0",
+      "hashPath": "google.protobuf.3.6.0.nupkg.sha512"
+    },
+    "Google.Protobuf.Tools/3.6.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-HhJChhfqbOjSpqtBdYtbklbTlcdPGPUOEbbaj0o7mJOJNdc8WW1XdurMBvqAXPlzfh+JB9BC8phBi8grEjxmjw==",
+      "path": "google.protobuf.tools/3.6.0",
+      "hashPath": "google.protobuf.tools.3.6.0.nupkg.sha512"
+    },
     "ImGui.NET/0.4.7": {
       "type": "package",
       "serviceable": true,
@@ -574,6 +678,13 @@
       "sha512": "sha512-vBj43RkAbeP1dzoPFR2+LfV5GevDRPDq6265JJBv223lMvT9rfdwe/S/I9ow7aZSLYKfw4qPDw6NW8YwjbDbvg==",
       "path": "serilog.sinks.file/4.0.0",
       "hashPath": "serilog.sinks.file.4.0.0.nupkg.sha512"
+    },
+    "Serilog.Sinks.TextWriter/2.1.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-rgDZVwl68RqOFogKO27RbYLlwCQehjUQv4gimLT/Fd7dYV7XRVtWTp73BJphjWgVq4DP8trv1ta9Ork5H8oDXw==",
+      "path": "serilog.sinks.textwriter/2.1.0",
+      "hashPath": "serilog.sinks.textwriter.2.1.0.nupkg.sha512"
     },
     "SixLabors.Core/1.0.0-beta0005": {
       "type": "package",
@@ -783,7 +894,22 @@
       "serviceable": false,
       "sha512": ""
     },
+    "SharpLife.Game.Client/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpLife.Game.Server/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
     "SharpLife.Input/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "SharpLife.Networking.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -800,6 +926,11 @@
     },
     "SharpLife.Utility/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Lidgren.Network.MultiTarget.Reference/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },

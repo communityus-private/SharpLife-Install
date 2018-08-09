@@ -1,18 +1,27 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "ce9d2ced6e263a5b6b0c2c56f973939090f8bf69"
+    "signature": "0486dcd9a7fa70ea8660419fe89667490efd9e40"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "SharpLife.FileFormats.BSP/1.0.0": {
         "dependencies": {
+          "Crc32.NET": "1.2.0",
           "SharpLife.FileFormats.WAD": "1.0.0",
           "SharpLife.Utility": "1.0.0"
         },
         "runtime": {
           "SharpLife.FileFormats.BSP.dll": {}
+        }
+      },
+      "Crc32.NET/1.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/Crc32.NET.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.2.0.5"
+          }
         }
       },
       "System.Memory/4.5.1": {},
@@ -73,6 +82,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Crc32.NET/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wNW/huzolu8MNKUnwCVKxjfAlCFpeI8AZVfF46iAWJ1+P6bTU1AZct7VAkDDEjgeeTJCVTkGZaD6jSd/fOiUkA==",
+      "path": "crc32.net/1.2.0",
+      "hashPath": "crc32.net.1.2.0.nupkg.sha512"
     },
     "System.Memory/4.5.1": {
       "type": "package",

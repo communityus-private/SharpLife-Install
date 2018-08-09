@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "4578c14b04631404eb9c0f643cbc248997e16896"
+    "signature": "82cf54a5d327c2fcd5d266b324b952d7f27aa3aa"
   },
   "compilationOptions": {},
   "targets": {
@@ -18,6 +18,14 @@
         },
         "runtime": {
           "SharpLife.Renderer.BSP.dll": {}
+        }
+      },
+      "Crc32.NET/1.2.0": {
+        "runtime": {
+          "lib/netstandard2.0/Crc32.NET.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.2.0.5"
+          }
         }
       },
       "ImGui.NET/0.4.7": {
@@ -147,6 +155,7 @@
       },
       "SharpLife.FileFormats.BSP/1.0.0": {
         "dependencies": {
+          "Crc32.NET": "1.2.0",
           "SharpLife.FileFormats.WAD": "1.0.0",
           "SharpLife.Utility": "1.0.0"
         },
@@ -380,6 +389,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "Crc32.NET/1.2.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-wNW/huzolu8MNKUnwCVKxjfAlCFpeI8AZVfF46iAWJ1+P6bTU1AZct7VAkDDEjgeeTJCVTkGZaD6jSd/fOiUkA==",
+      "path": "crc32.net/1.2.0",
+      "hashPath": "crc32.net.1.2.0.nupkg.sha512"
     },
     "ImGui.NET/0.4.7": {
       "type": "package",
