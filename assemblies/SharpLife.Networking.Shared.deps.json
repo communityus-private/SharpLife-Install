@@ -1,19 +1,23 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "22c1a5718a4b277110244d6b5db2dc4967f6329d"
+    "signature": "06c35b00da79d3cc30af1a2683a0362bf373dd4d"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "SharpLife.Engine.API/1.0.0": {
+      "SharpLife.Networking.Shared/1.0.0": {
         "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "2.1.1",
-          "SharpLife.CommandSystem": "1.0.0",
-          "SharpLife.Networking.Shared": "1.0.0"
+          "FastMember": "1.4.1",
+          "Generic.Math": "1.0.2",
+          "Google.Protobuf": "3.6.1",
+          "Google.Protobuf.Tools": "3.6.1",
+          "Serilog": "2.7.1",
+          "SharpLife.Utility": "1.0.0",
+          "Lidgren.Network.MultiTarget": "1.0.0.0"
         },
         "runtime": {
-          "SharpLife.Engine.API.dll": {}
+          "SharpLife.Networking.Shared.dll": {}
         }
       },
       "FastMember/1.4.1": {
@@ -41,35 +45,16 @@
           }
         }
       },
-      "Google.Protobuf/3.6.0": {
+      "Google.Protobuf/3.6.1": {
         "runtime": {
           "lib/netstandard1.0/Google.Protobuf.dll": {
-            "assemblyVersion": "3.6.0.0",
-            "fileVersion": "3.6.0.0"
+            "assemblyVersion": "3.6.1.0",
+            "fileVersion": "3.6.1.0"
           }
         }
       },
-      "Google.Protobuf.Tools/3.6.0": {},
+      "Google.Protobuf.Tools/3.6.1": {},
       "Microsoft.CSharp/4.5.0": {},
-      "Microsoft.Extensions.DependencyInjection/2.1.1": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
-          }
-        }
-      },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
-          }
-        }
-      },
       "Serilog/2.7.1": {
         "dependencies": {
           "System.Collections.NonGeneric": "4.3.0"
@@ -229,32 +214,9 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "SharpLife.CommandSystem/1.0.0": {
-        "dependencies": {
-          "Serilog": "2.7.1",
-          "SharpLife.Utility": "1.0.0"
-        },
-        "runtime": {
-          "SharpLife.CommandSystem.dll": {}
-        }
-      },
       "SharpLife.FileSystem/1.0.0": {
         "runtime": {
           "SharpLife.FileSystem.dll": {}
-        }
-      },
-      "SharpLife.Networking.Shared/1.0.0": {
-        "dependencies": {
-          "FastMember": "1.4.1",
-          "Generic.Math": "1.0.2",
-          "Google.Protobuf": "3.6.0",
-          "Google.Protobuf.Tools": "3.6.0",
-          "Serilog": "2.7.1",
-          "SharpLife.Utility": "1.0.0",
-          "Lidgren.Network.MultiTarget": "1.0.0.0"
-        },
-        "runtime": {
-          "SharpLife.Networking.Shared.dll": {}
         }
       },
       "SharpLife.Utility/1.0.0": {
@@ -265,7 +227,7 @@
           "SharpLife.Utility.dll": {}
         }
       },
-      "Lidgren.Network.MultiTarget.Reference/1.0.0.0": {
+      "Lidgren.Network.MultiTarget/1.0.0.0": {
         "runtime": {
           "Lidgren.Network.MultiTarget.dll": {
             "assemblyVersion": "1.0.0.0",
@@ -276,7 +238,7 @@
     }
   },
   "libraries": {
-    "SharpLife.Engine.API/1.0.0": {
+    "SharpLife.Networking.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -295,19 +257,19 @@
       "path": "generic.math/1.0.2",
       "hashPath": "generic.math.1.0.2.nupkg.sha512"
     },
-    "Google.Protobuf/3.6.0": {
+    "Google.Protobuf/3.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-gGYQonf/3HSQR45QIK3mvBChx2wguUn0azZM1SbGVjO1tFA0mhgdYFhz4EXBAEH01+wem0zIwtWniTCe5DHpYg==",
-      "path": "google.protobuf/3.6.0",
-      "hashPath": "google.protobuf.3.6.0.nupkg.sha512"
+      "sha512": "sha512-D/h9IZl76jjfM5VlPzG235Zdys9RKXNLYbRGm2fa6Y2UshTqAvYBPIydNOvNTEa24DER/m/zvelHlLO9n1GtNQ==",
+      "path": "google.protobuf/3.6.1",
+      "hashPath": "google.protobuf.3.6.1.nupkg.sha512"
     },
-    "Google.Protobuf.Tools/3.6.0": {
+    "Google.Protobuf.Tools/3.6.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-HhJChhfqbOjSpqtBdYtbklbTlcdPGPUOEbbaj0o7mJOJNdc8WW1XdurMBvqAXPlzfh+JB9BC8phBi8grEjxmjw==",
-      "path": "google.protobuf.tools/3.6.0",
-      "hashPath": "google.protobuf.tools.3.6.0.nupkg.sha512"
+      "sha512": "sha512-f0iLnV2LJ8v6kvJHiHwIPhoaWp+xCOjIac1SUxyuqvUtajU2DNdpE4TG2qWTQL8LkI8O5+A2cYOsJku1TfIhDg==",
+      "path": "google.protobuf.tools/3.6.1",
+      "hashPath": "google.protobuf.tools.3.6.1.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",
@@ -315,20 +277,6 @@
       "sha512": "sha512-EGoBmf3Na2ppbhPePDE9PlX81r1HuOZH5twBrq7couJZiPTjUnD3648balerQJO6EJ8Sj+43+XuRwQ7r+3tE3w==",
       "path": "microsoft.csharp/4.5.0",
       "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
-    },
-    "Microsoft.Extensions.DependencyInjection/2.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2nshYaLTn73Ie+/yTkb7EZIXwQeFIXsYCBy/jSY9bMayYykGNjdWa25frayhuPAGVbZpEgfgp3d4JRVEuVyEqQ==",
-      "path": "microsoft.extensions.dependencyinjection/2.1.1",
-      "hashPath": "microsoft.extensions.dependencyinjection.2.1.1.nupkg.sha512"
-    },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-PW1596sF97gpIc1JuUuYvTmeLfeqC5whbWPsWgJhN0fdwz683him3b/HB0dqhFesVssOjnnA0fEz4+S0gUeBqA==",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.1",
-      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.2.1.1.nupkg.sha512"
     },
     "Serilog/2.7.1": {
       "type": "package",
@@ -484,17 +432,7 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "SharpLife.CommandSystem/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "SharpLife.FileSystem/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SharpLife.Networking.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -504,7 +442,7 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Lidgren.Network.MultiTarget.Reference/1.0.0.0": {
+    "Lidgren.Network.MultiTarget/1.0.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""

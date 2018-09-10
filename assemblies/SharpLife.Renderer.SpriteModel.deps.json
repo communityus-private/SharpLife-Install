@@ -1,23 +1,21 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "1dc3a4f0fdbeab6b503d776d13a438b2f8388733"
+    "signature": "58f027b4e5f1725a9cf9565b236553f78b14e8d6"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
-      "SharpLife.Game.Client/1.0.0": {
+      "SharpLife.Renderer.SpriteModel/1.0.0": {
         "dependencies": {
-          "ImGui.NET": "0.4.7",
-          "Microsoft.Extensions.DependencyInjection": "2.1.1",
-          "SharpLife.CommandSystem": "1.0.0",
-          "SharpLife.Engine.Shared": "1.0.0",
-          "SharpLife.Game.Shared": "1.0.0",
-          "SharpLife.Utility": "1.0.0",
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
+          "SharpLife.Renderer": "1.0.0",
+          "SixLabors.ImageSharp.Drawing": "1.0.0-beta0005",
+          "Veldrid": "4.5.0.0",
+          "Veldrid.ImageSharp": "4.5.0.0",
+          "Veldrid.Utilities": "4.5.0.0"
         },
         "runtime": {
-          "SharpLife.Game.Client.dll": {}
+          "SharpLife.Renderer.SpriteModel.dll": {}
         }
       },
       "Crc32.NET/1.2.0": {
@@ -28,40 +26,6 @@
           }
         }
       },
-      "FastMember/1.4.1": {
-        "dependencies": {
-          "Microsoft.CSharp": "4.5.0",
-          "System.Data.Common": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Emit.Lightweight": "4.3.0",
-          "System.Security.Permissions": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/FastMember.dll": {
-            "assemblyVersion": "1.4.1.0",
-            "fileVersion": "1.4.1.0"
-          }
-        }
-      },
-      "Generic.Math/1.0.2": {
-        "runtime": {
-          "lib/netstandard1.3/Generic.Math.dll": {
-            "assemblyVersion": "1.0.1.0",
-            "fileVersion": "1.0.1.0"
-          }
-        }
-      },
-      "Google.Protobuf/3.6.1": {
-        "runtime": {
-          "lib/netstandard1.0/Google.Protobuf.dll": {
-            "assemblyVersion": "3.6.1.0",
-            "fileVersion": "3.6.1.0"
-          }
-        }
-      },
-      "Google.Protobuf.Tools/3.6.1": {},
       "ImGui.NET/0.4.7": {
         "dependencies": {
           "System.Buffers": "4.5.0",
@@ -94,26 +58,6 @@
             "rid": "win-x86",
             "assetType": "native",
             "fileVersion": "0.0.0.0"
-          }
-        }
-      },
-      "Microsoft.CSharp/4.5.0": {},
-      "Microsoft.Extensions.DependencyInjection/2.1.1": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1"
-        },
-        "runtime": {
-          "lib/netcoreapp2.0/Microsoft.Extensions.DependencyInjection.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
-          }
-        }
-      },
-      "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
-        "runtime": {
-          "lib/netstandard2.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll": {
-            "assemblyVersion": "2.1.1.0",
-            "fileVersion": "2.1.1.18157"
           }
         }
       },
@@ -189,11 +133,6 @@
         }
       },
       "System.Buffers/4.5.0": {},
-      "System.Collections/4.3.0": {
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        }
-      },
       "System.Collections.NonGeneric/4.3.0": {
         "dependencies": {
           "System.Diagnostics.Debug": "4.3.0",
@@ -202,18 +141,6 @@
           "System.Runtime": "4.3.0",
           "System.Runtime.Extensions": "4.3.0",
           "System.Threading": "4.3.0"
-        }
-      },
-      "System.Data.Common/4.3.0": {
-        "dependencies": {
-          "System.Collections": "4.3.0",
-          "System.Globalization": "4.3.0",
-          "System.IO": "4.3.0",
-          "System.Resources.ResourceManager": "4.3.0",
-          "System.Runtime": "4.3.0",
-          "System.Runtime.Extensions": "4.3.0",
-          "System.Text.RegularExpressions": "4.3.0",
-          "System.Threading.Tasks": "4.3.0"
         }
       },
       "System.Diagnostics.Debug/4.3.0": {
@@ -238,30 +165,6 @@
       "System.Reflection/4.3.0": {
         "dependencies": {
           "System.IO": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
-      "System.Reflection.Emit/4.3.0": {
-        "dependencies": {
-          "System.IO": "4.3.0",
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
-      "System.Reflection.Emit.ILGeneration/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Primitives": "4.3.0",
-          "System.Runtime": "4.3.0"
-        }
-      },
-      "System.Reflection.Emit.Lightweight/4.3.0": {
-        "dependencies": {
-          "System.Reflection": "4.3.0",
-          "System.Reflection.Emit.ILGeneration": "4.3.0",
           "System.Reflection.Primitives": "4.3.0",
           "System.Runtime": "4.3.0"
         }
@@ -292,46 +195,7 @@
           "System.Runtime": "4.3.0"
         }
       },
-      "System.Security.AccessControl/4.5.0": {
-        "dependencies": {
-          "System.Security.Principal.Windows": "4.5.0"
-        },
-        "runtimeTargets": {
-          "runtime/win/lib/_._": {
-            "rid": "win",
-            "assetType": "runtime"
-          }
-        }
-      },
-      "System.Security.Permissions/4.5.0": {
-        "dependencies": {
-          "System.Security.AccessControl": "4.5.0"
-        },
-        "runtime": {
-          "lib/netstandard2.0/System.Security.Permissions.dll": {
-            "assemblyVersion": "4.0.1.0",
-            "fileVersion": "4.6.26515.6"
-          }
-        }
-      },
-      "System.Security.Principal.Windows/4.5.0": {
-        "runtimeTargets": {
-          "runtime/unix/lib/_._": {
-            "rid": "unix",
-            "assetType": "runtime"
-          },
-          "runtime/win/lib/_._": {
-            "rid": "win",
-            "assetType": "runtime"
-          }
-        }
-      },
       "System.Text.Encoding/4.3.0": {
-        "dependencies": {
-          "System.Runtime": "4.3.0"
-        }
-      },
-      "System.Text.RegularExpressions/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
         }
@@ -345,32 +209,6 @@
       "System.Threading.Tasks/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
-        }
-      },
-      "SharpLife.CommandSystem/1.0.0": {
-        "dependencies": {
-          "Serilog": "2.7.1",
-          "SharpLife.Utility": "1.0.0"
-        },
-        "runtime": {
-          "SharpLife.CommandSystem.dll": {}
-        }
-      },
-      "SharpLife.Engine.Shared/1.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection.Abstractions": "2.1.1",
-          "Serilog": "2.7.1",
-          "SharpLife.CommandSystem": "1.0.0",
-          "SharpLife.FileFormats": "1.0.0",
-          "SharpLife.Input": "1.0.0",
-          "SharpLife.Networking.Shared": "1.0.0",
-          "SharpLife.Renderer": "1.0.0",
-          "SharpLife.Utility": "1.0.0",
-          "System.Memory": "4.5.1",
-          "SDL2-CS": "0.0.0.0"
-        },
-        "runtime": {
-          "SharpLife.Engine.Shared.dll": {}
         }
       },
       "SharpLife.FileFormats/1.0.0": {
@@ -390,24 +228,9 @@
           "SharpLife.FileSystem.dll": {}
         }
       },
-      "SharpLife.Game.Shared/1.0.0": {
-        "dependencies": {
-          "Microsoft.Extensions.DependencyInjection": "2.1.1",
-          "SharpLife.Engine.Shared": "1.0.0",
-          "SharpLife.Networking.Shared": "1.0.0"
-        },
-        "runtime": {
-          "SharpLife.Game.Shared.dll": {}
-        }
-      },
       "SharpLife.Input/1.0.0": {
         "dependencies": {
-          "System.Runtime.CompilerServices.Unsafe": "4.5.1",
-          "Veldrid.SDL2": "4.5.0.0",
-          "NativeLibraryLoader": "1.0.10.0",
-          "Microsoft.Extensions.DependencyModel": "2.0.3.0",
-          "Microsoft.DotNet.PlatformAbstractions": "2.0.3.0",
-          "Newtonsoft.Json": "9.0.0.0"
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
         },
         "runtime": {
           "SharpLife.Input.dll": {}
@@ -421,20 +244,6 @@
           "SharpLife.Models.dll": {}
         }
       },
-      "SharpLife.Networking.Shared/1.0.0": {
-        "dependencies": {
-          "FastMember": "1.4.1",
-          "Generic.Math": "1.0.2",
-          "Google.Protobuf": "3.6.1",
-          "Google.Protobuf.Tools": "3.6.1",
-          "Serilog": "2.7.1",
-          "SharpLife.Utility": "1.0.0",
-          "Lidgren.Network.MultiTarget": "1.0.0.0"
-        },
-        "runtime": {
-          "SharpLife.Networking.Shared.dll": {}
-        }
-      },
       "SharpLife.Renderer/1.0.0": {
         "dependencies": {
           "ImGui.NET": "0.4.7",
@@ -446,17 +255,20 @@
           "SixLabors.ImageSharp": "1.0.0-beta0005",
           "SixLabors.ImageSharp.Drawing": "1.0.0-beta0005",
           "System.Memory": "4.5.1",
-          "Veldrid": "4.5.0.0",
           "Veldrid.ImGui": "4.5.0.0",
-          "Veldrid.ImageSharp": "4.5.0.0",
-          "Veldrid.Utilities": "4.5.0.0",
           "Veldrid.SPIRV": "1.0.0.0",
+          "SDL2-CS": "0.0.0.0",
+          "Veldrid.SDL2": "4.5.0.0",
           "Veldrid.MetalBindings": "4.5.0.0",
           "Veldrid.OpenGLBindings": "4.5.0.0",
+          "NativeLibraryLoader": "1.0.10.0",
           "SharpDX.Direct3D11": "4.0.1.0",
           "SharpDX": "4.0.1.0",
           "SharpDX.DXGI": "4.0.1.0",
-          "SharpDX.D3DCompiler": "4.0.1.0"
+          "SharpDX.D3DCompiler": "4.0.1.0",
+          "Microsoft.Extensions.DependencyModel": "2.0.3.0",
+          "Microsoft.DotNet.PlatformAbstractions": "2.0.3.0",
+          "Newtonsoft.Json": "9.0.0.0"
         },
         "runtime": {
           "SharpLife.Renderer.dll": {}
@@ -468,6 +280,46 @@
         },
         "runtime": {
           "SharpLife.Utility.dll": {}
+        }
+      },
+      "Veldrid/4.5.0.0": {
+        "runtime": {
+          "Veldrid.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.16"
+          }
+        }
+      },
+      "Veldrid.ImageSharp/4.5.0.0": {
+        "runtime": {
+          "Veldrid.ImageSharp.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.16"
+          }
+        }
+      },
+      "Veldrid.Utilities/4.5.0.0": {
+        "runtime": {
+          "Veldrid.Utilities.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.16"
+          }
+        }
+      },
+      "Veldrid.ImGui.Reference/4.5.0.0": {
+        "runtime": {
+          "Veldrid.ImGui.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.16"
+          }
+        }
+      },
+      "Veldrid.SPIRV.Reference/1.0.0.0": {
+        "runtime": {
+          "Veldrid.SPIRV.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.73"
+          }
         }
       },
       "SDL2-CS.Reference/0.0.0.0": {
@@ -486,62 +338,6 @@
           }
         }
       },
-      "Lidgren.Network.MultiTarget.Reference/1.0.0.0": {
-        "runtime": {
-          "Lidgren.Network.MultiTarget.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
-          }
-        }
-      },
-      "Veldrid.Reference/4.5.0.0": {
-        "runtime": {
-          "Veldrid.dll": {
-            "assemblyVersion": "4.5.0.0",
-            "fileVersion": "4.5.0.16"
-          }
-        }
-      },
-      "Veldrid.ImGui.Reference/4.5.0.0": {
-        "runtime": {
-          "Veldrid.ImGui.dll": {
-            "assemblyVersion": "4.5.0.0",
-            "fileVersion": "4.5.0.16"
-          }
-        }
-      },
-      "Veldrid.ImageSharp.Reference/4.5.0.0": {
-        "runtime": {
-          "Veldrid.ImageSharp.dll": {
-            "assemblyVersion": "4.5.0.0",
-            "fileVersion": "4.5.0.16"
-          }
-        }
-      },
-      "Veldrid.Utilities.Reference/4.5.0.0": {
-        "runtime": {
-          "Veldrid.Utilities.dll": {
-            "assemblyVersion": "4.5.0.0",
-            "fileVersion": "4.5.0.16"
-          }
-        }
-      },
-      "Veldrid.SPIRV.Reference/1.0.0.0": {
-        "runtime": {
-          "Veldrid.SPIRV.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.73"
-          }
-        }
-      },
-      "NativeLibraryLoader.Reference/1.0.10.0": {
-        "runtime": {
-          "NativeLibraryLoader.dll": {
-            "assemblyVersion": "1.0.10.0",
-            "fileVersion": "1.0.10.0"
-          }
-        }
-      },
       "Veldrid.MetalBindings.Reference/4.5.0.0": {
         "runtime": {
           "Veldrid.MetalBindings.dll": {
@@ -555,6 +351,14 @@
           "Veldrid.OpenGLBindings.dll": {
             "assemblyVersion": "4.5.0.0",
             "fileVersion": "4.5.0.16"
+          }
+        }
+      },
+      "NativeLibraryLoader.Reference/1.0.10.0": {
+        "runtime": {
+          "NativeLibraryLoader.dll": {
+            "assemblyVersion": "1.0.10.0",
+            "fileVersion": "1.0.10.0"
           }
         }
       },
@@ -617,7 +421,7 @@
     }
   },
   "libraries": {
-    "SharpLife.Game.Client/1.0.0": {
+    "SharpLife.Renderer.SpriteModel/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -629,61 +433,12 @@
       "path": "crc32.net/1.2.0",
       "hashPath": "crc32.net.1.2.0.nupkg.sha512"
     },
-    "FastMember/1.4.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-dzUtQ4VR1AiajYHH/5S2lDW008QLudGUKNRI91Ni/YlqDXxETxVX0oKqwl6D8pcYRkdFCeE0tHT6GUA/Y2w/2g==",
-      "path": "fastmember/1.4.1",
-      "hashPath": "fastmember.1.4.1.nupkg.sha512"
-    },
-    "Generic.Math/1.0.2": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-AXDcisBojb3X53gS0eLoI3xTo9ZFOgjDQ9qG7JjMRh75zMZipk8xGn80Xn/prhLhuJM0yQE1zK35j46565AwzQ==",
-      "path": "generic.math/1.0.2",
-      "hashPath": "generic.math.1.0.2.nupkg.sha512"
-    },
-    "Google.Protobuf/3.6.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-D/h9IZl76jjfM5VlPzG235Zdys9RKXNLYbRGm2fa6Y2UshTqAvYBPIydNOvNTEa24DER/m/zvelHlLO9n1GtNQ==",
-      "path": "google.protobuf/3.6.1",
-      "hashPath": "google.protobuf.3.6.1.nupkg.sha512"
-    },
-    "Google.Protobuf.Tools/3.6.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-f0iLnV2LJ8v6kvJHiHwIPhoaWp+xCOjIac1SUxyuqvUtajU2DNdpE4TG2qWTQL8LkI8O5+A2cYOsJku1TfIhDg==",
-      "path": "google.protobuf.tools/3.6.1",
-      "hashPath": "google.protobuf.tools.3.6.1.nupkg.sha512"
-    },
     "ImGui.NET/0.4.7": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-Q/D7a9YsSwG7KhWtxqTjku6i+VK+ypyapEgLe9nMP2Wb3lpWY5/m7XVCXWOEojJZLx649kvVBlmOn9iIrKIidw==",
       "path": "imgui.net/0.4.7",
       "hashPath": "imgui.net.0.4.7.nupkg.sha512"
-    },
-    "Microsoft.CSharp/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-EGoBmf3Na2ppbhPePDE9PlX81r1HuOZH5twBrq7couJZiPTjUnD3648balerQJO6EJ8Sj+43+XuRwQ7r+3tE3w==",
-      "path": "microsoft.csharp/4.5.0",
-      "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
-    },
-    "Microsoft.Extensions.DependencyInjection/2.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-2nshYaLTn73Ie+/yTkb7EZIXwQeFIXsYCBy/jSY9bMayYykGNjdWa25frayhuPAGVbZpEgfgp3d4JRVEuVyEqQ==",
-      "path": "microsoft.extensions.dependencyinjection/2.1.1",
-      "hashPath": "microsoft.extensions.dependencyinjection.2.1.1.nupkg.sha512"
-    },
-    "Microsoft.Extensions.DependencyInjection.Abstractions/2.1.1": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-PW1596sF97gpIc1JuUuYvTmeLfeqC5whbWPsWgJhN0fdwz683him3b/HB0dqhFesVssOjnnA0fEz4+S0gUeBqA==",
-      "path": "microsoft.extensions.dependencyinjection.abstractions/2.1.1",
-      "hashPath": "microsoft.extensions.dependencyinjection.abstractions.2.1.1.nupkg.sha512"
     },
     "Serilog/2.7.1": {
       "type": "package",
@@ -734,26 +489,12 @@
       "path": "system.buffers/4.5.0",
       "hashPath": "system.buffers.4.5.0.nupkg.sha512"
     },
-    "System.Collections/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
-      "path": "system.collections/4.3.0",
-      "hashPath": "system.collections.4.3.0.nupkg.sha512"
-    },
     "System.Collections.NonGeneric/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-prtjIEMhGUnQq6RnPEYLpFt8AtLbp9yq2zxOSrY7KJJZrw25Fi97IzBqY7iqssbM61Ek5b8f3MG/sG1N2sN5KA==",
       "path": "system.collections.nongeneric/4.3.0",
       "hashPath": "system.collections.nongeneric.4.3.0.nupkg.sha512"
-    },
-    "System.Data.Common/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-lm6E3T5u7BOuEH0u18JpbJHxBfOJPuCyl4Kg1RH10ktYLp5uEEE1xKrHW56/We4SnZpGAuCc9N0MJpSDhTHZGQ==",
-      "path": "system.data.common/4.3.0",
-      "hashPath": "system.data.common.4.3.0.nupkg.sha512"
     },
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
@@ -797,27 +538,6 @@
       "path": "system.reflection/4.3.0",
       "hashPath": "system.reflection.4.3.0.nupkg.sha512"
     },
-    "System.Reflection.Emit/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-228FG0jLcIwTVJyz8CLFKueVqQK36ANazUManGaJHkO0icjiIypKW7YLWLIWahyIkdh5M7mV2dJepllLyA1SKg==",
-      "path": "system.reflection.emit/4.3.0",
-      "hashPath": "system.reflection.emit.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.Emit.ILGeneration/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-59tBslAk9733NXLrUJrwNZEzbMAcu8k344OYo+wfSVygcgZ9lgBdGIzH/nrg3LYhXceynyvTc8t5/GD4Ri0/ng==",
-      "path": "system.reflection.emit.ilgeneration/4.3.0",
-      "hashPath": "system.reflection.emit.ilgeneration.4.3.0.nupkg.sha512"
-    },
-    "System.Reflection.Emit.Lightweight/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-oadVHGSMsTmZsAF864QYN1t1QzZjIcuKU3l2S9cZOwDdDueNTrqq1yRj7koFfIGEnKpt6NjpL3rOzRhs4ryOgA==",
-      "path": "system.reflection.emit.lightweight/4.3.0",
-      "hashPath": "system.reflection.emit.lightweight.4.3.0.nupkg.sha512"
-    },
     "System.Reflection.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -853,40 +573,12 @@
       "path": "system.runtime.extensions/4.3.0",
       "hashPath": "system.runtime.extensions.4.3.0.nupkg.sha512"
     },
-    "System.Security.AccessControl/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-aVjTe36YkO8FzfNhMLoPEzv3gF9rphoW9ngFhG/MH4zzEPLx07sNrgCLwMP4Wx2leI6qarMrGv21OwQXYUKLmw==",
-      "path": "system.security.accesscontrol/4.5.0",
-      "hashPath": "system.security.accesscontrol.4.5.0.nupkg.sha512"
-    },
-    "System.Security.Permissions/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-vDQ7q30Soe0a1cPhvxn+7IFmMeTG5IP+hTQrnKQDjTNpD2epqwbZSzMM2Git5TXBr4Kwwhc/0SEtJY0qPoiegA==",
-      "path": "system.security.permissions/4.5.0",
-      "hashPath": "system.security.permissions.4.5.0.nupkg.sha512"
-    },
-    "System.Security.Principal.Windows/4.5.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-WA9ETb/pY3BjnxKjBUHEgO59B7d/nnmjHFsqjJ2eDT780nD769CT1/bw2ia0Z6W7NqlcqokE6sKGKa6uw88XGA==",
-      "path": "system.security.principal.windows/4.5.0",
-      "hashPath": "system.security.principal.windows.4.5.0.nupkg.sha512"
-    },
     "System.Text.Encoding/4.3.0": {
       "type": "package",
       "serviceable": true,
       "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
-    },
-    "System.Text.RegularExpressions/4.3.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-RpT2DA+L660cBt1FssIE9CAGpLFdFPuheB7pLpKpn6ZXNby7jDERe8Ua/Ne2xGiwLVG2JOqziiaVCGDon5sKFA==",
-      "path": "system.text.regularexpressions/4.3.0",
-      "hashPath": "system.text.regularexpressions.4.3.0.nupkg.sha512"
     },
     "System.Threading/4.3.0": {
       "type": "package",
@@ -902,27 +594,12 @@
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
     },
-    "SharpLife.CommandSystem/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SharpLife.Engine.Shared/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "SharpLife.FileFormats/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
     },
     "SharpLife.FileSystem/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "SharpLife.Game.Shared/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""
@@ -937,11 +614,6 @@
       "serviceable": false,
       "sha512": ""
     },
-    "SharpLife.Networking.Shared/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
-    },
     "SharpLife.Renderer/1.0.0": {
       "type": "project",
       "serviceable": false,
@@ -949,6 +621,31 @@
     },
     "SharpLife.Utility/1.0.0": {
       "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Veldrid/4.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Veldrid.ImageSharp/4.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Veldrid.Utilities/4.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Veldrid.ImGui.Reference/4.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Veldrid.SPIRV.Reference/1.0.0.0": {
+      "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
@@ -962,47 +659,17 @@
       "serviceable": false,
       "sha512": ""
     },
-    "Lidgren.Network.MultiTarget.Reference/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Veldrid.Reference/4.5.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Veldrid.ImGui.Reference/4.5.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Veldrid.ImageSharp.Reference/4.5.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Veldrid.Utilities.Reference/4.5.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Veldrid.SPIRV.Reference/1.0.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "NativeLibraryLoader.Reference/1.0.10.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
     "Veldrid.MetalBindings.Reference/4.5.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
     "Veldrid.OpenGLBindings.Reference/4.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NativeLibraryLoader.Reference/1.0.10.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
