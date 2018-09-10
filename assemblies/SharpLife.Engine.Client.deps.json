@@ -474,6 +474,7 @@
           "System.Memory": "4.5.1",
           "Veldrid.Utilities": "4.5.0.0",
           "Veldrid.ImageSharp": "4.5.0.0",
+          "vk": "1.0.21.0",
           "Veldrid.MetalBindings": "4.5.0.0",
           "Veldrid.OpenGLBindings": "4.5.0.0",
           "NativeLibraryLoader": "1.0.10.0",
@@ -575,6 +576,14 @@
           "Veldrid.SDL2.dll": {
             "assemblyVersion": "4.5.0.0",
             "fileVersion": "4.5.0.16"
+          }
+        }
+      },
+      "vk.Reference/1.0.21.0": {
+        "runtime": {
+          "vk.dll": {
+            "assemblyVersion": "1.0.21.0",
+            "fileVersion": "1.0.21.0"
           }
         }
       },
@@ -1052,6 +1061,11 @@
       "sha512": ""
     },
     "Veldrid.SDL2.Reference/4.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "vk.Reference/1.0.21.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
