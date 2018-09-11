@@ -2,11 +2,11 @@
 
 layout(location = 0) in vec2 Position;
 layout(location = 1) in vec2 TexCoords;
-layout(location = 0) out vec2 fsin_0;
+layout(location = 0) out vec2 fsin_TexCoords;
 
 void main()
 {
-    fsin_0 = TexCoords;
-	fsin_0.y = -fsin_0.y;
-    gl_Position = vec4(Position.x, Position.y, 0, 1);
+    fsin_TexCoords = TexCoords;
+	fsin_TexCoords.y = -fsin_TexCoords.y;
+    gl_Position = vec4(Position, 0, 1);
 }
