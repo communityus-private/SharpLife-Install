@@ -27,20 +27,16 @@ layout(location = 2) in vec2 LightmapCoords;
 layout(location = 3) in float LightmapXOffset;
 layout(location = 4) in ivec4 StyleIndices;
 
-layout(location = 0) out vec3 fsin_0;
-layout(location = 1) out vec2 fsin_TexCoord;
-layout(location = 2) out vec2 fsin_LightmapCoord;
-layout(location = 3) out flat float fsin_LightmapXOffset;
-layout(location = 4) out flat ivec4 fsin_StyleIndices;
-
-layout(constant_id = 102) const bool ReverseDepthRange = true;
+layout(location = 0) out vec2 fsin_TextureCoords;
+layout(location = 1) out vec2 fsin_LightmapCoords;
+layout(location = 2) out flat float fsin_LightmapXOffset;
+layout(location = 3) out flat ivec4 fsin_StyleIndices;
 
 void main()
 {
     gl_Position = _Proj * _View * _WorldAndInverse.World * vec4(vsin_Position, 1.0f);
-    fsin_0 = vsin_Position;
-	fsin_TexCoord = TextureCoords;
-	fsin_LightmapCoord = LightmapCoords;
+	fsin_TextureCoords = TextureCoords;
+	fsin_LightmapCoords = LightmapCoords;
 	fsin_LightmapXOffset = LightmapXOffset;
 	fsin_StyleIndices = StyleIndices;
 }

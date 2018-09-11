@@ -258,6 +258,7 @@
           "Veldrid.SPIRV": "1.0.0.0",
           "SDL2-CS": "0.0.0.0",
           "Veldrid.SDL2": "4.5.0.0",
+          "vk": "1.0.21.0",
           "Veldrid.MetalBindings": "4.5.0.0",
           "Veldrid.OpenGLBindings": "4.5.0.0",
           "NativeLibraryLoader": "1.0.10.0",
@@ -334,6 +335,14 @@
           "Veldrid.SDL2.dll": {
             "assemblyVersion": "4.5.0.0",
             "fileVersion": "4.5.0.16"
+          }
+        }
+      },
+      "vk.Reference/1.0.21.0": {
+        "runtime": {
+          "vk.dll": {
+            "assemblyVersion": "1.0.21.0",
+            "fileVersion": "1.0.21.0"
           }
         }
       },
@@ -526,7 +535,7 @@
     "System.Numerics.Vectors/4.4.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UiLzLW+Lw6HLed1Hcg+8jSRttrbuXv7DANVj0DkL9g6EnnzbL75EB7EWsw5uRbhxd/4YdG8li5XizGWepmG3PQ==",
+      "sha512": "sha512-Cef1/gIrPVTzTTN1oRje2m8ATGD9n8FiT4N68aGfEnEVSwO3Ffmib09N1OnIoUWMBneuYt/PdtmxwurXX3KPQQ==",
       "path": "system.numerics.vectors/4.4.0",
       "hashPath": "system.numerics.vectors.4.4.0.nupkg.sha512"
     },
@@ -654,6 +663,11 @@
       "sha512": ""
     },
     "Veldrid.SDL2.Reference/4.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "vk.Reference/1.0.21.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
