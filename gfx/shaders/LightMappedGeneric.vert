@@ -24,12 +24,14 @@ layout(set = 0, binding = 2) uniform WorldAndInverse
 layout(location = 0) in vec3 vsin_Position;
 layout(location = 1) in vec2 TextureCoords;
 layout(location = 2) in vec2 LightmapCoords;
-layout(location = 3) in ivec4 StyleIndices;
+layout(location = 3) in float LightmapXOffset;
+layout(location = 4) in ivec4 StyleIndices;
 
 layout(location = 0) out vec3 fsin_0;
 layout(location = 1) out vec2 fsin_TexCoord;
 layout(location = 2) out vec2 fsin_LightmapCoord;
-layout(location = 3) out flat ivec4 fsin_StyleIndices;
+layout(location = 3) out flat float fsin_LightmapXOffset;
+layout(location = 4) out flat ivec4 fsin_StyleIndices;
 
 layout(constant_id = 102) const bool ReverseDepthRange = true;
 
@@ -39,5 +41,6 @@ void main()
     fsin_0 = vsin_Position;
 	fsin_TexCoord = TextureCoords;
 	fsin_LightmapCoord = LightmapCoords;
+	fsin_LightmapXOffset = LightmapXOffset;
 	fsin_StyleIndices = StyleIndices;
 }

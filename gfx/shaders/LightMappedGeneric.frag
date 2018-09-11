@@ -16,7 +16,8 @@ layout(set = 2, binding = 0) uniform texture2D Lightmaps;
 layout(location = 0) in vec3 fsin_0;
 layout(location = 1) in vec2 textureCoords;
 layout(location = 2) in vec2 LightmapCoords;
-layout(location = 3) in flat ivec4 StyleIndices;
+layout(location = 3) in flat float LightmapXOffset;
+layout(location = 4) in flat ivec4 StyleIndices;
 
 layout(location = 0) out vec4 OutputColor;
 
@@ -28,7 +29,7 @@ vec3 GetLightData(int styleIndex, int styleValueIndex)
 	}
 	
 	vec2 lightmapCoords = LightmapCoords;
-	lightmapCoords.x *= styleIndex + 1;
+	lightmapCoords.x += LightmapXOffset * styleIndex;
 
 	return texture(sampler2D(Lightmaps, Sampler), lightmapCoords).rgb * _LightStyles[styleValueIndex];
 }
