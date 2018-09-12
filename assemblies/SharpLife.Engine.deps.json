@@ -580,6 +580,7 @@
         "dependencies": {
           "ImGui.NET": "0.4.7",
           "Serilog": "2.7.1",
+          "SharpLife.CommandSystem": "1.0.0",
           "SharpLife.FileFormats": "1.0.0",
           "SharpLife.FileSystem": "1.0.0",
           "SharpLife.Input": "1.0.0",
