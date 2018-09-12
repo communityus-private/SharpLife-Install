@@ -56,37 +56,49 @@ vec3 GetLightData(int styleIndex)
 }
 
 //Compute the gamma value for the given texture value
-float TextureGamma(float value)
+vec3 TextureGamma(vec3 value)
 {
-	return clamp(pow(value, _LightingInfo.TextureGamma * (1.0 / _LightingInfo.MainGamma)), 0.0, 1.0);
+	float gamma = _LightingInfo.TextureGamma * (1.0 / _LightingInfo.MainGamma);
+	
+	for (int i = 0; i < 3; ++i)
+	{
+		value[i] = clamp(pow(value[i], gamma), 0.0, 1.0);
+	}
+	
+	return value;
 }
 
 //Compute the gamma value for the given lighting value
-float LightingGamma(float value)
+vec3 LightingGamma(vec3 value)
 {
+	float gamma = 1.0 / _LightingInfo.MainGamma;
+
 	float g3 = 0.125 - _LightingInfo.Brightness * _LightingInfo.Brightness * 0.075;
 
-	float f = pow(value, _LightingInfo.LightingGamma);
-
-	if(_LightingInfo.Brightness > 1.0)
+	for (int i = 0; i < 3; ++i)
 	{
-		f *= _LightingInfo.Brightness;
+		float f = pow(value[i], _LightingInfo.LightingGamma);
+
+		if(_LightingInfo.Brightness > 1.0)
+		{
+			f *= _LightingInfo.Brightness;
+		}
+		
+		float base;
+
+		if( g3 >= f )
+		{
+			base = (f / g3) * 0.125;
+		}
+		else
+		{
+			base = (((f - g3) / (1.0 - g3)) * 0.875) + 0.125;
+		}
+
+		value[i] = max(0.0, pow(base, gamma));
 	}
 	
-	float base;
-
-	if( g3 >= f )
-	{
-		base = (f / g3) * 0.125;
-	}
-	else
-	{
-		base = (((f - g3) / (1.0 - g3)) * 0.875) + 0.125;
-	}
-
-	float result = pow(base, 1.0 / _LightingInfo.MainGamma);
-
-	return max(0.0, result);
+	return value;
 }
 
 void main()
@@ -121,11 +133,8 @@ void main()
 	}
 	
 	//Gamma correction
-	for (int i = 0; i < 3; ++i)
-	{
-		color[i] = TextureGamma(color[i]);
-		lightData[i] = LightingGamma(lightData[i]);
-	}
-	
+	color.rgb = TextureGamma(color.rgb);
+	lightData = LightingGamma(lightData);
+
     OutputColor = color * vec4(lightData, 1.0);
 }
