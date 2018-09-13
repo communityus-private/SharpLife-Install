@@ -1,17 +1,11 @@
 #version 450
 
 #include "shared/GammaCorrectionDefs.frag.inc"
+#include "shared/RenderMode.inc"
 
 const float NoLightStyle = 255;
 const int MaxLightStyles = 64;
 const int MaxStylesPerSurface = 4;
-
-const int RenderModeNormal = 0;
-const int RenderModeTransColor = 1;
-const int RenderModeTransTexture = 2;
-const int RenderModeTransGlow = 3;
-const int RenderModeTransAlpha = 4;
-const int RenderModeTransAdd = 5;
 
 layout(set = 0, binding = 3) uniform LightingInfo
 {
