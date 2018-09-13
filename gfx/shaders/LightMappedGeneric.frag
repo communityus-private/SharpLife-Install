@@ -1,12 +1,6 @@
 #version 450
 
-struct LightingInfoStruct
-{
-	float MainGamma;
-	float TextureGamma;
-	float LightingGamma;
-	float Brightness;
-};
+#include "shared/GammaCorrectionDefs.frag.inc"
 
 const float NoLightStyle = 255;
 const int MaxLightStyles = 64;
@@ -47,61 +41,14 @@ layout(location = 3) in flat ivec4 StyleIndices;
 
 layout(location = 0) out vec4 OutputColor;
 
+#include "shared/GammaCorrection.frag.inc"
+
 vec3 GetLightData(int styleIndex)
 {	
 	vec2 lightmapCoords = LightmapCoords;
 	lightmapCoords.x += LightmapXOffset * styleIndex;
 
 	return texture(sampler2D(Lightmaps, Sampler), lightmapCoords).rgb * _LightStyles[StyleIndices[styleIndex]];
-}
-
-//Compute the gamma value for the given texture value
-vec3 TextureGamma(vec3 value)
-{
-	float gamma = _LightingInfo.TextureGamma * (1.0 / _LightingInfo.MainGamma);
-	
-	for (int i = 0; i < 3; ++i)
-	{
-		value[i] = clamp(pow(value[i], gamma), 0.0, 1.0);
-	}
-	
-	return value;
-}
-
-//Compute the gamma value for the given lighting value
-vec3 LightingGamma(vec3 value)
-{
-	float gamma = 1.0 / _LightingInfo.MainGamma;
-	
-	//Clamp brightness to 1.0 for this calculation
-	float g3Brightness = min(1.0, _LightingInfo.Brightness);
-
-	float g3 = 0.125 - g3Brightness * g3Brightness * 0.075;
-
-	for (int i = 0; i < 3; ++i)
-	{
-		float f = pow(value[i], _LightingInfo.LightingGamma);
-
-		if(_LightingInfo.Brightness > 1.0)
-		{
-			f *= _LightingInfo.Brightness;
-		}
-		
-		float base;
-
-		if( g3 >= f )
-		{
-			base = (f / g3) * 0.125;
-		}
-		else
-		{
-			base = (((f - g3) / (1.0 - g3)) * 0.875) + 0.125;
-		}
-
-		value[i] = max(0.0, pow(base, gamma));
-	}
-	
-	return value;
 }
 
 void main()
