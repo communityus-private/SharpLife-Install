@@ -2,11 +2,14 @@ $fileNames = Get-ChildItem -Path $scriptPath -Recurse
 
 foreach ($file in $fileNames)
 {
-    if ($file.Name.EndsWith("vert") -Or $file.Name.EndsWith("frag") -Or $file.Name.EndsWith("comp"))
-    {
-        Write-Host "Compiling $file"
-        ./bin/glslc -o $file".spv" $file
-    }
+	#Use relative path to allow subdirectories
+	$relativePath = Resolve-Path -Relative $file.FullName
+
+	if ($relativePath.EndsWith("vert") -Or $relativePath.EndsWith("frag") -Or $relativePath.EndsWith("comp"))
+	{
+		Write-Host "Compiling $relativePath"
+		./bin/glslc -o $relativePath".spv" $relativePath
+	}
 }
 
 Write-Host -NoNewLine 'Press any key to continue...';
