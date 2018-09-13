@@ -72,8 +72,11 @@ vec3 TextureGamma(vec3 value)
 vec3 LightingGamma(vec3 value)
 {
 	float gamma = 1.0 / _LightingInfo.MainGamma;
+	
+	//Clamp brightness to 1.0 for this calculation
+	float g3Brightness = min(1.0, _LightingInfo.Brightness);
 
-	float g3 = 0.125 - _LightingInfo.Brightness * _LightingInfo.Brightness * 0.075;
+	float g3 = 0.125 - g3Brightness * g3Brightness * 0.075;
 
 	for (int i = 0; i < 3; ++i)
 	{
