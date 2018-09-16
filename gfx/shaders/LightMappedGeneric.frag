@@ -5,7 +5,6 @@
 
 const float NoLightStyle = 255;
 const int MaxLightStyles = 64;
-const int MaxStylesPerSurface = 4;
 const int FullbrightValue = 255 * 256;
 const float OverbrightColorMultiplier = 2.0 / 3.0;
 
@@ -68,14 +67,9 @@ void main()
 	//All surfaces have at least one style
 	ivec3 lightData = GetLightData(0);
 	
-	for (int i = 1; i < MaxStylesPerSurface; ++i)
+	//There is never a style following a NoLightStyle value
+	for (int i = 1; i < MaxStylesPerSurface && StyleIndices[i] != NoLightStyle; ++i)
 	{
-		//There is never a style following a NoLightStyle value
-		if (StyleIndices[i] == NoLightStyle)
-		{
-			break;
-		}
-		
 		lightData += GetLightData(i);
 	}
 	
@@ -85,13 +79,13 @@ void main()
 	//Clamp values to maximum
 	for (int i = 0; i < 3; ++i)
 	{
-		lightData[i] = min(1023, lightData[i] / 16384);
+		lightData[i] = min(StyledLightValueRangeMultiplier, lightData[i] / StyledLightValueRangeDivisor);
 	}
 	
 	//Gamma correction
 	color.rgb = TextureGamma(color.rgb);
 	
-	//Normalize the value from [0, 1023] to [0, 1]
+	//Normalize the value from [0, StyledLightValueRangeMultiplier] to [0, 1]
 	vec3 finalLightData = LightingGamma(lightData) / (MaxStylesPerSurface * 255);
 	
 	vec4 finalColor = color * vec4(finalLightData, 1.0);
