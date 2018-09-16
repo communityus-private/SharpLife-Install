@@ -9,4 +9,5 @@ struct LightingInfoStruct
 	float TextureGamma;
 	float LightingGamma;
 	float Brightness;
+	int LightScale;
 };

@@ -6,6 +6,7 @@
 const float NoLightStyle = 255;
 const int MaxLightStyles = 64;
 const int MaxStylesPerSurface = 4;
+const int FullbrightValue = 255 * 256;
 
 layout(set = 0, binding = 3) uniform LightingInfo
 {
@@ -14,7 +15,7 @@ layout(set = 0, binding = 3) uniform LightingInfo
 
 layout(set = 0, binding = 4) uniform LightStyles
 {
-	float _LightStyles[MaxLightStyles];
+	int _LightStyles[MaxLightStyles];
 };
 
 layout(set = 0, binding = 5) uniform RenderColor
@@ -37,12 +38,13 @@ layout(location = 0) out vec4 OutputColor;
 
 #include "shared/GammaCorrection.frag.inc"
 
-vec3 GetLightData(int styleIndex)
+//Lighting data uses [0, 255] range values for increased precision
+ivec3 GetLightData(int styleIndex)
 {	
 	vec2 lightmapCoords = LightmapCoords;
 	lightmapCoords.x += LightmapXOffset * styleIndex;
 
-	return texture(sampler2D(Lightmaps, Sampler), lightmapCoords).rgb * _LightStyles[StyleIndices[styleIndex]];
+	return ivec3(texture(sampler2D(Lightmaps, Sampler), lightmapCoords).rgb * 255) * _LightStyles[StyleIndices[styleIndex]];
 }
 
 void main()
@@ -63,7 +65,7 @@ void main()
 	}
 
 	//All surfaces have at least one style
-	vec3 lightData = GetLightData(0);
+	ivec3 lightData = GetLightData(0);
 	
 	for (int i = 1; i < MaxStylesPerSurface; ++i)
 	{
@@ -76,9 +78,20 @@ void main()
 		lightData += GetLightData(i);
 	}
 	
+	//Apply light scale modifier
+	lightData *= _LightingInfo.LightScale;
+	
+	//Clamp values to maximum
+	for (int i = 0; i < 3; ++i)
+	{
+		lightData[i] = min(1023, lightData[i] / 16384);
+	}
+	
 	//Gamma correction
 	color.rgb = TextureGamma(color.rgb);
-	lightData = LightingGamma(lightData);
+	
+	//Normalize the value from [0, 1023] to [0, 1]
+	vec3 finalLightData = LightingGamma(lightData) / (MaxStylesPerSurface * 255);
 
-    OutputColor = color * vec4(lightData, 1.0);
+    OutputColor = color * vec4(finalLightData, 1.0);
 }

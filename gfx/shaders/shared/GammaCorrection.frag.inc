@@ -18,7 +18,8 @@ vec3 TextureGamma(vec3 value)
 }
 
 //Compute the gamma value for the given lighting value
-vec3 LightingGamma(vec3 value)
+//Expects inputs to be in the range [0, 1023]
+vec3 LightingGamma(ivec3 value)
 {
 	float gamma = 1.0 / _LightingInfo.MainGamma;
 	
@@ -29,7 +30,7 @@ vec3 LightingGamma(vec3 value)
 
 	for (int i = 0; i < 3; ++i)
 	{
-		float f = pow(value[i], _LightingInfo.LightingGamma);
+		float f = pow(value[i] / 1023.0, _LightingInfo.LightingGamma);
 
 		if(_LightingInfo.Brightness > 1.0)
 		{
@@ -47,7 +48,7 @@ vec3 LightingGamma(vec3 value)
 			base = (((f - g3) / (1.0 - g3)) * 0.875) + 0.125;
 		}
 
-		value[i] = max(0.0, pow(base, gamma));
+		value[i] = max(0, int(pow(base, gamma) * 1023.0));
 	}
 	
 	return value;
