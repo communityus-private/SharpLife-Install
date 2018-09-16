@@ -10,4 +10,5 @@ struct LightingInfoStruct
 	float LightingGamma;
 	float Brightness;
 	int LightScale;
+	bool OverbrightEnabled;
 };

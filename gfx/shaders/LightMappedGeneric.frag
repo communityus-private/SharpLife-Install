@@ -7,6 +7,7 @@ const float NoLightStyle = 255;
 const int MaxLightStyles = 64;
 const int MaxStylesPerSurface = 4;
 const int FullbrightValue = 255 * 256;
+const float OverbrightColorMultiplier = 2.0 / 3.0;
 
 layout(set = 0, binding = 3) uniform LightingInfo
 {
@@ -92,6 +93,13 @@ void main()
 	
 	//Normalize the value from [0, 1023] to [0, 1]
 	vec3 finalLightData = LightingGamma(lightData) / (MaxStylesPerSurface * 255);
-
-    OutputColor = color * vec4(finalLightData, 1.0);
+	
+	vec4 finalColor = color * vec4(finalLightData, 1.0);
+	
+	if (_LightingInfo.OverbrightEnabled)
+	{
+		finalColor = OverbrightColorMultiplier * (2 * finalColor);
+	}
+	
+	OutputColor = finalColor;
 }
