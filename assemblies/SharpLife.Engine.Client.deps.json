@@ -451,7 +451,6 @@
           "ImGui.NET": "0.4.7",
           "Serilog": "2.7.1",
           "SharpLife.CommandSystem": "1.0.0",
-          "SharpLife.FileFormats": "1.0.0",
           "SharpLife.FileSystem": "1.0.0",
           "SharpLife.Input": "1.0.0",
           "SharpLife.Models": "1.0.0",
@@ -474,7 +473,6 @@
           "SixLabors.ImageSharp.Drawing": "1.0.0-beta0005",
           "System.Memory": "4.5.1",
           "Veldrid.Utilities": "4.5.0.0",
-          "Veldrid.ImageSharp": "4.5.0.0",
           "vk": "1.0.21.0",
           "Veldrid.MetalBindings": "4.5.0.0",
           "Veldrid.OpenGLBindings": "4.5.0.0",
@@ -494,7 +492,8 @@
       "SharpLife.Renderer.SpriteModel/1.0.0": {
         "dependencies": {
           "SharpLife.Renderer": "1.0.0",
-          "SixLabors.ImageSharp.Drawing": "1.0.0-beta0005"
+          "SixLabors.ImageSharp.Drawing": "1.0.0-beta0005",
+          "Veldrid.ImageSharp": "4.5.0.0"
         },
         "runtime": {
           "SharpLife.Renderer.SpriteModel.dll": {}
@@ -510,7 +509,9 @@
       },
       "SharpLife.Utility/1.0.0": {
         "dependencies": {
-          "SharpLife.FileSystem": "1.0.0"
+          "Crc32.NET": "1.2.0",
+          "SharpLife.FileSystem": "1.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
         },
         "runtime": {
           "SharpLife.Utility.dll": {}

@@ -9,7 +9,8 @@
       "SharpLife.Renderer.StudioModel/1.0.0": {
         "dependencies": {
           "SharpLife.Renderer": "1.0.0",
-          "Veldrid": "4.5.0.0"
+          "Veldrid": "4.5.0.0",
+          "Veldrid.Utilities": "4.5.0.0"
         },
         "runtime": {
           "SharpLife.Renderer.StudioModel.dll": {}
@@ -255,7 +256,6 @@
           "ImGui.NET": "0.4.7",
           "Serilog": "2.7.1",
           "SharpLife.CommandSystem": "1.0.0",
-          "SharpLife.FileFormats": "1.0.0",
           "SharpLife.FileSystem": "1.0.0",
           "SharpLife.Input": "1.0.0",
           "SharpLife.Models": "1.0.0",
@@ -264,7 +264,6 @@
           "System.Memory": "4.5.1",
           "Veldrid.ImGui": "4.5.0.0",
           "Veldrid.ImageSharp": "4.5.0.0",
-          "Veldrid.Utilities": "4.5.0.0",
           "Veldrid.SPIRV": "1.0.0.0",
           "SDL2-CS": "0.0.0.0",
           "Veldrid.SDL2": "4.5.0.0",
@@ -286,7 +285,9 @@
       },
       "SharpLife.Utility/1.0.0": {
         "dependencies": {
-          "SharpLife.FileSystem": "1.0.0"
+          "Crc32.NET": "1.2.0",
+          "SharpLife.FileSystem": "1.0.0",
+          "System.Runtime.CompilerServices.Unsafe": "4.5.1"
         },
         "runtime": {
           "SharpLife.Utility.dll": {}
@@ -295,6 +296,14 @@
       "Veldrid/4.5.0.0": {
         "runtime": {
           "Veldrid.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "4.5.0.16"
+          }
+        }
+      },
+      "Veldrid.Utilities/4.5.0.0": {
+        "runtime": {
+          "Veldrid.Utilities.dll": {
             "assemblyVersion": "4.5.0.0",
             "fileVersion": "4.5.0.16"
           }
@@ -311,14 +320,6 @@
       "Veldrid.ImageSharp.Reference/4.5.0.0": {
         "runtime": {
           "Veldrid.ImageSharp.dll": {
-            "assemblyVersion": "4.5.0.0",
-            "fileVersion": "4.5.0.16"
-          }
-        }
-      },
-      "Veldrid.Utilities.Reference/4.5.0.0": {
-        "runtime": {
-          "Veldrid.Utilities.dll": {
             "assemblyVersion": "4.5.0.0",
             "fileVersion": "4.5.0.16"
           }
@@ -652,17 +653,17 @@
       "serviceable": false,
       "sha512": ""
     },
+    "Veldrid.Utilities/4.5.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    },
     "Veldrid.ImGui.Reference/4.5.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
     },
     "Veldrid.ImageSharp.Reference/4.5.0.0": {
-      "type": "reference",
-      "serviceable": false,
-      "sha512": ""
-    },
-    "Veldrid.Utilities.Reference/4.5.0.0": {
       "type": "reference",
       "serviceable": false,
       "sha512": ""
