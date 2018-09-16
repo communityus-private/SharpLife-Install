@@ -11,6 +11,8 @@ const int StyledLightValueRangeMultiplier = (256 * MaxStylesPerSurface) - 1;
 //Rescales a styled light value to the range [0, StyledLightValueRangeMultiplier]
 const int StyledLightValueRangeDivisor = 16384;
 
+const int DefaultLightScale = 256;
+
 struct LightingInfoStruct
 {
 	float MainGamma;
@@ -19,4 +21,5 @@ struct LightingInfoStruct
 	float Brightness;
 	int LightScale;
 	bool OverbrightEnabled;
+	bool Fullbright;
 };

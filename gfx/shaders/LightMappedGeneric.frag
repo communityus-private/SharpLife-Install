@@ -5,7 +5,7 @@
 
 const float NoLightStyle = 255;
 const int MaxLightStyles = 64;
-const int FullbrightValue = 255 * 256;
+const float FullbrightValue = 1.0;
 const float OverbrightColorMultiplier = 2.0 / 3.0;
 
 layout(set = 0, binding = 3) uniform LightingInfo
@@ -47,6 +47,39 @@ ivec3 GetLightData(int styleIndex)
 	return ivec3(texture(sampler2D(Lightmaps, Sampler), lightmapCoords).rgb * 255) * _LightStyles[StyleIndices[styleIndex]];
 }
 
+vec3 CalculateLightData()
+{
+	if (_LightingInfo.Fullbright)
+	{
+		return vec3(FullbrightValue);
+	}
+	else
+	{
+		//All surfaces have at least one style
+		ivec3 lightData = GetLightData(0);
+		
+		//There is never a style following a NoLightStyle value
+		for (int i = 1; i < MaxStylesPerSurface && StyleIndices[i] != NoLightStyle; ++i)
+		{
+			lightData += GetLightData(i);
+		}
+		
+		//Apply light scale modifier
+		lightData *= _LightingInfo.LightScale;
+		
+		//Clamp values to maximum
+		for (int i = 0; i < 3; ++i)
+		{
+			lightData[i] = min(StyledLightValueRangeMultiplier, lightData[i] / StyledLightValueRangeDivisor);
+		}
+		
+		//Normalize the value from [0, StyledLightValueRangeMultiplier] to [0, 1]
+		vec3 finalLightData = LightingGamma(lightData) / (MaxStylesPerSurface * 255);
+		
+		return finalLightData;
+	}
+}
+
 void main()
 {
 	//Color render mode ignores all texture and lighting data, and is not gamma corrected
@@ -64,29 +97,10 @@ void main()
 		discard;
 	}
 
-	//All surfaces have at least one style
-	ivec3 lightData = GetLightData(0);
-	
-	//There is never a style following a NoLightStyle value
-	for (int i = 1; i < MaxStylesPerSurface && StyleIndices[i] != NoLightStyle; ++i)
-	{
-		lightData += GetLightData(i);
-	}
-	
-	//Apply light scale modifier
-	lightData *= _LightingInfo.LightScale;
-	
-	//Clamp values to maximum
-	for (int i = 0; i < 3; ++i)
-	{
-		lightData[i] = min(StyledLightValueRangeMultiplier, lightData[i] / StyledLightValueRangeDivisor);
-	}
-	
 	//Gamma correction
 	color.rgb = TextureGamma(color.rgb);
 	
-	//Normalize the value from [0, StyledLightValueRangeMultiplier] to [0, 1]
-	vec3 finalLightData = LightingGamma(lightData) / (MaxStylesPerSurface * 255);
+	vec3 finalLightData = CalculateLightData();
 	
 	vec4 finalColor = color * vec4(finalLightData, 1.0);
 	
