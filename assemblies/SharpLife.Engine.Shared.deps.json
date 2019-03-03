@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "2947b4dcb23cfa3f85da18ca428b9fbed835076f"
+    "signature": "a0de9c82f159674992ee980f0470898e998a2525"
   },
   "compilationOptions": {},
   "targets": {
@@ -9,7 +9,7 @@
       "SharpLife.Engine.Shared/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.DependencyInjection.Abstractions": "2.2.0",
-          "Serilog": "2.7.1",
+          "Serilog": "2.8.0",
           "SharpLife.CommandSystem": "1.0.0",
           "SharpLife.Input": "1.0.0",
           "SharpLife.Models": "1.0.0",
@@ -64,7 +64,7 @@
         }
       },
       "Google.Protobuf.Tools/3.6.1": {},
-      "ImGui.NET/1.66.0": {
+      "ImGui.NET/1.67.0": {
         "dependencies": {
           "System.Buffers": "4.5.0",
           "System.Numerics.Vectors": "4.4.0",
@@ -72,8 +72,8 @@
         },
         "runtime": {
           "lib/netstandard2.0/ImGui.NET.dll": {
-            "assemblyVersion": "1.66.0.0",
-            "fileVersion": "1.66.0.0"
+            "assemblyVersion": "1.67.0.0",
+            "fileVersion": "1.67.0.0"
           }
         },
         "runtimeTargets": {
@@ -185,14 +185,14 @@
         }
       },
       "runtime.native.System/4.0.0": {},
-      "Serilog/2.7.1": {
+      "Serilog/2.8.0": {
         "dependencies": {
           "System.Collections.NonGeneric": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.3/Serilog.dll": {
+          "lib/netstandard2.0/Serilog.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.7.1.0"
+            "fileVersion": "2.8.0.0"
           }
         }
       },
@@ -721,7 +721,7 @@
           }
         }
       },
-      "Veldrid.SPIRV/1.0.6": {
+      "Veldrid.SPIRV/1.0.7": {
         "dependencies": {
           "System.Runtime.CompilerServices.Unsafe": "4.5.2",
           "Veldrid": "4.5.0"
@@ -729,7 +729,7 @@
         "runtime": {
           "lib/netstandard2.0/Veldrid.SPIRV.dll": {
             "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.6.106"
+            "fileVersion": "1.0.7.7"
           }
         },
         "runtimeTargets": {
@@ -776,7 +776,7 @@
       },
       "SharpLife.CommandSystem/1.0.0": {
         "dependencies": {
-          "Serilog": "2.7.1",
+          "Serilog": "2.8.0",
           "SharpLife.Utility": "1.0.0"
         },
         "runtime": {
@@ -812,7 +812,7 @@
           "Generic.Math": "1.0.2",
           "Google.Protobuf": "3.6.1",
           "Google.Protobuf.Tools": "3.6.1",
-          "Serilog": "2.7.1",
+          "Serilog": "2.8.0",
           "SharpLife.Utility": "1.0.0",
           "Lidgren.Network.MultiTarget": "1.0.0.0"
         },
@@ -822,14 +822,14 @@
       },
       "SharpLife.Renderer/1.0.0": {
         "dependencies": {
-          "ImGui.NET": "1.66.0",
-          "Serilog": "2.7.1",
+          "ImGui.NET": "1.67.0",
+          "Serilog": "2.8.0",
           "SharpLife.CommandSystem": "1.0.0",
           "SixLabors.ImageSharp": "1.0.0-beta0005",
           "SixLabors.ImageSharp.Drawing": "1.0.0-beta0005",
           "Veldrid": "4.5.0",
           "Veldrid.ImageSharp": "4.5.0",
-          "Veldrid.SPIRV": "1.0.6",
+          "Veldrid.SPIRV": "1.0.7",
           "Veldrid.Utilities": "4.5.0"
         },
         "runtime": {
@@ -906,12 +906,12 @@
       "path": "google.protobuf.tools/3.6.1",
       "hashPath": "google.protobuf.tools.3.6.1.nupkg.sha512"
     },
-    "ImGui.NET/1.66.0": {
+    "ImGui.NET/1.67.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UGERZ8gPvQcXCLA9Ux94Szsbx8kpQ5o8akVLZfpnyP1rsZXLjybW1LwXUnOzoS8k6zzObZvx+NVuV/PpsqmFOQ==",
-      "path": "imgui.net/1.66.0",
-      "hashPath": "imgui.net.1.66.0.nupkg.sha512"
+      "sha512": "sha512-9rdvdUD2yVkctC0HzzLJ2znG58RnBoqlGcenIqMjWM/x0IuOOguoh+rI8WUsGFRNjkuTd+NI8tC/8+rpTAajNQ==",
+      "path": "imgui.net/1.67.0",
+      "hashPath": "imgui.net.1.67.0.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",
@@ -962,12 +962,12 @@
       "path": "runtime.native.system/4.0.0",
       "hashPath": "runtime.native.system.4.0.0.nupkg.sha512"
     },
-    "Serilog/2.7.1": {
+    "Serilog/2.8.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5eS6AD4hesOYvlwYqjntLaOonDnEiY22QiMUKueJHPrm5vm1k4tzXgOgCb2mJoMnj6l5Wt6AXV5liXzXymvarg==",
-      "path": "serilog/2.7.1",
-      "hashPath": "serilog.2.7.1.nupkg.sha512"
+      "sha512": "sha512-zjuKXW5IQws43IHX7VY9nURsaCiBYh2kyJCWLJRSWrTsx/syBKHV8MibWe2A+QH3Er0AiwA+OJmO3DhFJDY1+A==",
+      "path": "serilog/2.8.0",
+      "hashPath": "serilog.2.8.0.nupkg.sha512"
     },
     "SharpDX/4.0.1": {
       "type": "package",
@@ -1368,12 +1368,12 @@
       "path": "veldrid.sdl2/4.5.0",
       "hashPath": "veldrid.sdl2.4.5.0.nupkg.sha512"
     },
-    "Veldrid.SPIRV/1.0.6": {
+    "Veldrid.SPIRV/1.0.7": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-TCAI1dScAIdtJgOwheD/wVnxgY1SFyPUPMSBt90DRReJweY0cNuvOkwBVeuN4geMUMAB7IMkwr1beRimC4l9Gw==",
-      "path": "veldrid.spirv/1.0.6",
-      "hashPath": "veldrid.spirv.1.0.6.nupkg.sha512"
+      "sha512": "sha512-NjKLBNa7jczny1WBqwqB4GXrCBaj7pSi4CDDXLyeBN3DuY2JFmThIJ+UUJ2edwwaPpj7kBdU/v78VJshLvonHw==",
+      "path": "veldrid.spirv/1.0.7",
+      "hashPath": "veldrid.spirv.1.0.7.nupkg.sha512"
     },
     "Veldrid.Utilities/4.5.0": {
       "type": "package",

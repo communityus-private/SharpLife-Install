@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "95c016ec737e9ed684245a8eae8a17328a4678a2"
+    "signature": "ce2496598306c22ed184b4668a75d65b1717d257"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,7 +12,7 @@
           "Generic.Math": "1.0.2",
           "Google.Protobuf": "3.6.1",
           "Google.Protobuf.Tools": "3.6.1",
-          "Serilog": "2.7.1",
+          "Serilog": "2.8.0",
           "SharpLife.Utility": "1.0.0",
           "Lidgren.Network.MultiTarget": "1.0.0.0"
         },
@@ -63,14 +63,14 @@
       },
       "Google.Protobuf.Tools/3.6.1": {},
       "Microsoft.CSharp/4.5.0": {},
-      "Serilog/2.7.1": {
+      "Serilog/2.8.0": {
         "dependencies": {
           "System.Collections.NonGeneric": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.3/Serilog.dll": {
+          "lib/netstandard2.0/Serilog.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.7.1.0"
+            "fileVersion": "2.8.0.0"
           }
         }
       },
@@ -331,12 +331,12 @@
       "path": "microsoft.csharp/4.5.0",
       "hashPath": "microsoft.csharp.4.5.0.nupkg.sha512"
     },
-    "Serilog/2.7.1": {
+    "Serilog/2.8.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5eS6AD4hesOYvlwYqjntLaOonDnEiY22QiMUKueJHPrm5vm1k4tzXgOgCb2mJoMnj6l5Wt6AXV5liXzXymvarg==",
-      "path": "serilog/2.7.1",
-      "hashPath": "serilog.2.7.1.nupkg.sha512"
+      "sha512": "sha512-zjuKXW5IQws43IHX7VY9nURsaCiBYh2kyJCWLJRSWrTsx/syBKHV8MibWe2A+QH3Er0AiwA+OJmO3DhFJDY1+A==",
+      "path": "serilog/2.8.0",
+      "hashPath": "serilog.2.8.0.nupkg.sha512"
     },
     "SixLabors.Core/1.0.0-beta0006": {
       "type": "package",

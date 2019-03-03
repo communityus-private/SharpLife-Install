@@ -1,14 +1,14 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.1",
-    "signature": "00dc47c98363b79a57bfe71d13ec50316843b0cb"
+    "signature": "08fc8f8da55a84f76760a848bb9d778516c7e84d"
   },
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v2.1": {
       "SharpLife.CommandSystem/1.0.0": {
         "dependencies": {
-          "Serilog": "2.7.1",
+          "Serilog": "2.8.0",
           "SharpLife.Utility": "1.0.0"
         },
         "runtime": {
@@ -23,14 +23,14 @@
           }
         }
       },
-      "Serilog/2.7.1": {
+      "Serilog/2.8.0": {
         "dependencies": {
           "System.Collections.NonGeneric": "4.3.0"
         },
         "runtime": {
-          "lib/netstandard1.3/Serilog.dll": {
+          "lib/netstandard2.0/Serilog.dll": {
             "assemblyVersion": "2.0.0.0",
-            "fileVersion": "2.7.1.0"
+            "fileVersion": "2.8.0.0"
           }
         }
       },
@@ -168,12 +168,12 @@
       "path": "crc32.net/1.2.0",
       "hashPath": "crc32.net.1.2.0.nupkg.sha512"
     },
-    "Serilog/2.7.1": {
+    "Serilog/2.8.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-5eS6AD4hesOYvlwYqjntLaOonDnEiY22QiMUKueJHPrm5vm1k4tzXgOgCb2mJoMnj6l5Wt6AXV5liXzXymvarg==",
-      "path": "serilog/2.7.1",
-      "hashPath": "serilog.2.7.1.nupkg.sha512"
+      "sha512": "sha512-zjuKXW5IQws43IHX7VY9nURsaCiBYh2kyJCWLJRSWrTsx/syBKHV8MibWe2A+QH3Er0AiwA+OJmO3DhFJDY1+A==",
+      "path": "serilog/2.8.0",
+      "hashPath": "serilog.2.8.0.nupkg.sha512"
     },
     "SixLabors.Core/1.0.0-beta0006": {
       "type": "package",
